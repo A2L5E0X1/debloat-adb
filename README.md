@@ -1,6 +1,9 @@
 # Android Debloatscripts for Bash
 Debloat your Android Phone, by GG2501YT
 
+## Important
+The debloat-google.sh Script will remove **ALL** Google Apps + Google Services!! See `How to use?`
+
 ## How to use?
 Run the Debloatscripts you want. But before you execute a Script, please edit the script and remove the debloat command of the apps you want to keep or put a # before the line.
 
