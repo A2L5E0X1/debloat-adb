@@ -17,13 +17,15 @@ Fork this Repository and do a Pullrequest. If you want to add a Debloatscript fo
 Yes but you need to install Cygwin or a Linux Subsystem (Windows 10 only) with adb
 
 ## Which devices are supported?
-Any Android Device with ADB. But some devices (for example Fire TV Stick on FireOS) have the uninstall command disabled (It will show INTERNAL_ERROR)
+Any Android Device (min. API 20) with ADB. But some devices (for example Fire TV Stick on FireOS) have the uninstall command disabled (It will show INTERNAL_ERROR)
 
 ## I've executed a Debloatscript and there were some Errors.
 This is normal. Not every device has this apps. It depends on your device and on your ROM.
 
 ## Which Apps does the Script install????
-All Apps you can install with the appinstall script are opensource and on FDroid. 
+All Apps you can install with the appinstall script are opensource and on FDroid.
+
+This Version of RetroMusic is selfbuilt and contains all Pro Features. See https://github.com/Linux4/RetroMusicPlayer
 
 ## Where can I update Aurora Store and Lawnchair?
 Aurora Store can be updated on the gitlab page (https://gitlab.com/AuroraOSS/AuroraStore/-/releases) or on their Telegram Channel (https://t.me/AuroraOfficial)

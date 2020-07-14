@@ -4,7 +4,7 @@ echo "App Installer Script"
 echo "by GG2501YT         "
 echo "####################"
 echo "Please read README.md before you continue!"
-echo "Please enable ADB and connect your Phone your Computer or use ADB over Network"
+echo "Please enable ADB and connect your Phone with your Computer."
 adb wait-for-device
 echo "Device found!"
 adb devices

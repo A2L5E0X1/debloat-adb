@@ -3,13 +3,13 @@ echo "###################"
 echo "EMUI Debloat Script"
 echo "by GG2501YT        "
 echo "###################"
-echo "Please read README.md before you continue!" 
-echo "Please enable ADB and connect your Phone your Computer or use ADB over Network"
+echo "Please read README.md before you continue!"
+echo "Please enable ADB and connect your Phone with your Computer"
 adb wait-for-device
 echo "Device found!"
 adb devices
 echo "Debloat will start soon..."
-sleep 3 
+sleep 3
 
 ## EMUI Apps
 
@@ -20,7 +20,7 @@ sleep 3
 adb shell pm uninstall --user 0 com.huawei.android.thememanager #Designs
 adb shell pm uninstall --user 0 com.huawei.android.chr #CHR Service
 adb shell pm uninstall --user 0 com.huawei.motionservice #Motionshit
-adb shell pm uninstall --user 0 com.nuance.swype.emui #EMUI Keyboard, will get replaced with OpenBoard
+adb shell pm uninstall --user 0 com.nuance.swype.emui #EMUI Keyboard
 adb shell pm uninstall --user 0 com.huawei.phoneservice #HiCare
 adb shell pm uninstall --user 0 com.huawei.iconnect #iconnect (apple?)
 adb shell pm uninstall --user 0 com.huawei.hwid #Huawei Account Login
@@ -40,11 +40,11 @@ adb shell pm uninstall com.huawei.appmarket #AppGallery
 adb shell pm uninstall --user 0 com.huawei.appmarket
 adb shell pm uninstall com.huawei.health #Health
 adb shell pm uninstall --user 0 com.huawei.health
-adb shell pm uninstall --user 0 com.android.mediacenter #will get replaced with Retro Music Mod (EMUI Player will get killed when closing in Quickstep)
-adb shell pm uninstall --user 0 com.huawei.hidisk #Files, will get replaced with Amaze 
+adb shell pm uninstall --user 0 com.android.mediacenter #Music-Player
+adb shell pm uninstall --user 0 com.huawei.hidisk #Files
 adb shell pm uninstall --user 0 com.huawei.KoBackup #Backup
 adb shell pm uninstall com.huawei.KoBackup #Backup
-adb shell pm uninstall --user 0 com.android.email
+adb shell pm uninstall --user 0 com.android.email #E-Mail App
 
 ## EMUI 8 Parts, P10 Lite
 adb shell pm uninstall --user 0 com.huawei.hifolder #unknown
@@ -86,4 +86,4 @@ adb shell pm uninstall --user 0 com.gameloft.android.GloftSMIF
 adb kill-server
 
 echo "Done"
-echo "Thanks for using my Debloat Scripts!" 
+echo "Thanks for using my Debloat Scripts!"
