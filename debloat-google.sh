@@ -15,25 +15,27 @@ sleep 3
 
 # DANGER Zone
 adb shell pm uninstall --user 0 com.google.android.gms #Play Services
-adb shell pm uninstall --user 0 com.google.android.gsf #Service Framework   
+adb shell pm uninstall --user 0 com.google.android.gsf #Service Framework
 adb shell pm uninstall --user 0 com.google.android.gsf.login #Google Login Service
 adb shell pm uninstall --user 0 com.google.android.feedback #Market Feedback
 adb shell pm uninstall --user 0 com.google.android.tts #Google TTS
 adb shell pm uninstall --user 0 com.google.android.apps.pixelmigrate #Google Restore
 adb shell pm uninstall --user 0 com.google.android.backupuses #Google Backuptransport
+adb shell pm uninstall --user 0 com.google.android.backuptransport
 adb shell pm uninstall --user 0 com.google.android.syncadapters.contacts #Google Contacts Syncadapter
 adb shell pm uninstall --user 0 com.google.android.syncadapters.calendar #Google Calendar Syncadapter
 adb shell pm uninstall --user 0 com.google.android.gmsintegration #Play Services Integration
+# DANGER Zone end
 
-adb shell pm uninstall --user 0 com.android.chrome #Google Chrome                                                                                                                                                                                                                                                                                                                   
-adb shell pm uninstall --user 0 com.google.android.apps.photos #Google Photos                                                                                                                                                   
-adb shell pm uninstall --user 0 com.google.android.gm #Gmail                                                                                                                                                      
-adb shell pm uninstall --user 0 com.google.android.googlequicksearchbox #Google App                                                                                                                                           
-adb shell pm uninstall --user 0 com.google.android.apps.maps #Maps                                                                                                                                                    
-adb shell pm uninstall --user 0 com.google.android.music #Play Music                                                                                                                                                
-adb shell pm uninstall --user 0 com.google.android.videos #Play Videos                                                                                                                                                     
-adb shell pm uninstall --user 0 com.google.android.youtube #YouTube                                                                                                                                                       
-adb shell pm uninstall --user 0 com.android.vending #Play Store                                                                                                                                                             
+adb shell pm uninstall --user 0 com.android.chrome #Google Chrome
+adb shell pm uninstall --user 0 com.google.android.apps.photos #Google Photos
+adb shell pm uninstall --user 0 com.google.android.gm #Gmail
+adb shell pm uninstall --user 0 com.google.android.googlequicksearchbox #Google App
+adb shell pm uninstall --user 0 com.google.android.apps.maps #Maps
+adb shell pm uninstall --user 0 com.google.android.music #Play Music
+adb shell pm uninstall --user 0 com.google.android.videos #Play Videos
+adb shell pm uninstall --user 0 com.google.android.youtube #YouTube
+adb shell pm uninstall --user 0 com.android.vending #Play Store
 adb shell pm uninstall --user 0 com.google.android.apps.docs #Drive
 adb shell pm uninstall --user 0 com.google.android.apps.tachyon #Duo
 adb shell pm uninstall --user 0 com.google.android.inputmethod.latin #Gboard
@@ -64,6 +66,7 @@ adb shell pm uninstall --user 0 com.google.android.apps.kids.familylink #Google 
 adb shell pm uninstall --user 0 com.google.android.projection.gearhead #Android Car
 adb shell pm uninstall --user 0 com.google.android.ims #Carrier Services
 adb shell pm uninstall --user 0 com.google.ar.core # Google AR Core
+adb shell pm uninstall --user 0 com.google.android.apps.genie.geniewidget #NewsAndWeather
 
 ## Stop ADB Connection
 adb kill-server
