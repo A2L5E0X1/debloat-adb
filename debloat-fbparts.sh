@@ -4,7 +4,7 @@ echo "Facebook Debloat Script"
 echo "by GG2501YT            "
 echo "#######################"
 echo "Please read README.md before you continue!"
-echo "Please enable ADB and connect your Phone with your Computer"
+echo "Please enable ADB and connect your Phone with your Computer."
 adb wait-for-device
 echo "Device found!"
 adb devices
