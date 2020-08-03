@@ -5,13 +5,13 @@ Debloat your Android Phone, by GG2501YT
 The debloat-google.sh Script will remove **ALL** Google Apps + Google Services!! See `How to use?`
 
 ## How to use?
-Run the Debloatscripts you want. But before you execute a Script, please edit the script and remove the debloat command of the apps you want to keep or put a # before the line.
+Run the Debloatscripts you want. But before you execute a Script, please edit the script and remove the debloat command of the apps you want to keep or put a # in front of the line.
 
 ## Can I restore the uninstalled Apps?
 You can restore some apps by installing the original apk. On some devices like EMUI Devices it doesn't work. If you can't restore the App you want, you need the hardreset the whole device! So please be careful.
 
 ## You forgot an App! How can I add it to your Script?
-Fork this Repository and do a Pullrequest. If you want to add a Debloatscript for an System that is not available yet, you can also do a Pullrequest. But please use the debloat-example.sh to make your Debloatscript.
+Fork this Repository and make a Pull-request. If you want to add a Debloatscript for an System that is not available yet, you can also make a Pull-request. But please use the debloat-example.sh to make your Debloatscript.
 
 ## Can I execute this on Windows?
 Yes but you need to install Cygwin or a Linux Subsystem (Windows 10 only) with adb
