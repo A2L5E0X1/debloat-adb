@@ -13,18 +13,18 @@ sleep 3
 
 ## Facebook Parts
 # They are not needed even if you use Facebook
-FBBLOAT=(
+BLOAT=(
+    "com.facebook.appmanager"        #Facebook Appmanager
+    "com.facebook.installer"         #Facebook Installer
+    "com.facebook.oxygen.appmanager" #Facebook Appmanager
     "com.facebook.oxygen.installer"  #Facebook Installer
     "com.facebook.oxygen.services"   #Facebook Services
-    "com.facebook.oxygen.appmanager" #Facebook Appmanager
     "com.facebook.oxygen.system"     #Facebook System
-    "com.facebook.system"            #Facebook System
-    "com.facebook.appmanager"        #Facebook Appmanager
     "com.facebook.services"          #Facebook Services
-    "com.facebook.installer"         #Facebook Installer
+    "com.facebook.system"            #Facebook System
 )
 
-for APP in "${FBBLOAT[@]}"
+for APP in "${BLOAT[@]}"
 do
     adb shell pm uninstall --user 0 "$APP"
 done

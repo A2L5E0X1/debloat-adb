@@ -16,46 +16,46 @@ sleep 3
 BLOAT=(
     #"com.huawei.android.launcher" # DO NOT UNINSTALL ON EMUI 9 AND NEWER, OR QUICKSTEP WILL BE DEAD
     ## EMUI 5 Parts, P9 Lite
-    "com.huawei.android.thememanager"   #Designs
+    "com.android.email"                 #E-Mail App
+    "com.android.mediacenter"           #Music-Player
+    "com.huawei.KoBackup"               #Backup
     "com.huawei.android.chr"            #CHR Service
-    "com.huawei.motionservice"          #Motionshit
-    "com.nuance.swype.emui"             #EMUI Keyboard
-    "com.huawei.phoneservice"           #HiCare
-    "com.huawei.iconnect"               #iconnect (apple?)
-    "com.huawei.hwid"                   #Huawei Account Login
     "com.huawei.android.instantshare"   #Huawei Share
-    "com.huawei.indexsearch.observer"   #indexsearch
-    "com.huawei.indexsearch"            #indexsearch
-    "com.huawei.vassistant"             #Voice Assistant
-    "com.huawei.watch.sync"             #WatchSync
+    "com.huawei.android.thememanager"   #Designs
+    "com.huawei.appmarket"
+    "com.huawei.gamebox.global"
+    "com.huawei.health"
+    "com.huawei.hidisk"                 #Files
+    "com.huawei.hwid"                   #Huawei Account Login
     "com.huawei.hwstartupguide"         #Startup Guide
+    "com.huawei.iconnect"               #iconnect (apple?)
+    "com.huawei.indexsearch"            #indexsearch
+    "com.huawei.indexsearch.observer"   #indexsearch
+    "com.huawei.motionservice"          #Motionshit
+    "com.huawei.phoneservice"           #HiCare
     "com.huawei.powergenie"             #PowerGenie (Kills Apps), see https://dontkillmyapp.com/huawei
     "com.huawei.scanner"                #Scanner
-    "com.huawei.gamebox.global"
-    "com.huawei.appmarket"
-    "com.huawei.health"
-    "com.android.mediacenter"           #Music-Player
-    "com.huawei.hidisk"                 #Files
-    "com.huawei.KoBackup"               #Backup
-    "com.android.email"                 #E-Mail App
+    "com.huawei.vassistant"             #Voice Assistant
+    "com.huawei.watch.sync"             #WatchSync
+    "com.nuance.swype.emui"             #EMUI Keyboard
     ## EMUI 8 Parts, P10 Lite
-    "com.huawei.hifolder"               #unknown
-    "com.huawei.android.tips"           #Tips
-    "com.huawei.synergy"                #unknown
-    "com.huawei.hiview"                 #unknown
-    "com.touchtype.swiftkey"            #SwiftKey
-    "com.huawei.nearby"                 #Nearby
     "com.huawei.android.FloatTasks"     #unknown
-    "com.huawei.recsys"                 #unknown
-    "com.huawei.gameassistant"          #Gameassistant
-    "com.huawei.hiviewtunnel"           #unknown
-    "com.huawei.tips"                   #More Tips
-    "com.swiftkey.swiftkeyconfigurator" #SwiftKeyboard Part
-    "com.qeexo.smartshot"               #unknown
     "com.huawei.android.instantonline"  #unknown
+    "com.huawei.android.tips"           #Tips
+    "com.huawei.gameassistant"          #Gameassistant
+    "com.huawei.hifolder"               #unknown
+    "com.huawei.hiview"                 #unknown
+    "com.huawei.hiviewtunnel"           #unknown
+    "com.huawei.nearby"                 #Nearby
+    "com.huawei.recsys"                 #unknown
+    "com.huawei.synergy"                #unknown
+    "com.huawei.tips"                   #More Tips
+    "com.qeexo.smartshot"               #unknown
+    "com.swiftkey.swiftkeyconfigurator" #SwiftKeyboard Part
+    "com.touchtype.swiftkey"            #SwiftKey
     ## EMUI 10 Parts, Honor 10 Lite, thanks to mixboxmixing
-    "com.huawei.wallet"
     "com.huawei.hivideo.overseas"
+    "com.huawei.wallet"
     ## Gameloft Games
     "com.gameloft.android.GloftAGMP"
     "com.gameloft.android.GloftDBMF"
@@ -72,9 +72,7 @@ do
 done
 
 USER_BLOAT=(
-    "com.huawei.health"                 #Health
-    "com.huawei.appmarket"              #AppGallery
-    "com.huawei.KoBackup"               #Backup
+    "com.android.hwmirror"              #Mirror
     "com.gameloft.android.GloftAGMP"
     "com.gameloft.android.GloftDBMF"
     "com.gameloft.android.GloftPDMF"
@@ -82,9 +80,11 @@ USER_BLOAT=(
     "com.gameloft.android.GloftSCCA"
     "com.gameloft.android.GloftSCRT"
     "com.gameloft.android.GloftSMIF"
-    "com.android.hwmirror"              #Mirror
+    "com.huawei.KoBackup"               #Backup
+    "com.huawei.appmarket"              #AppGallery
     "com.huawei.compass"                #Compass
     "com.huawei.gamebox.global"         #HiGame
+    "com.huawei.health"                 #Health
 )
 
 for USER_APP in "${USER_BLOAT[@]}"

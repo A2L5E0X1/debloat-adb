@@ -13,19 +13,19 @@ sleep 3
 
 ## Bloatware
 BLOAT=(
-    "com.hp.android.printservice"       #HP Printservice
-    "com.mobilesrepublic.appy"          #NewsRepublic
+    "com.dropbox.android"               #Dropbox
     "com.facebook.katana"               #Facebook
     "com.facebook.orca"                 #Messenger
-    "com.twitter.android"               #Twitter
-    "com.microsoft.office.word"         #MS Word
-    "com.microsoft.office.onenote"      #MS OneNote
+    "com.hp.android.printservice"       #HP Printservice
     "com.microsoft.office.excel"        #MS Excel
-    "com.dropbox.android"               #Dropbox
-    "com.microsoft.skydrive"            #OneDrive
-    "com.microsoft.office.powerpoint"   #MS Powerpoint
+    "com.microsoft.office.onenote"      #MS OneNote
     "com.microsoft.office.outlook"      #MS Outlook
+    "com.microsoft.office.powerpoint"   #MS Powerpoint
+    "com.microsoft.office.word"         #MS Word
+    "com.microsoft.skydrive"            #OneDrive
+    "com.mobilesrepublic.appy"          #NewsRepublic
     "com.skype.raider"                  #Skype
+    "com.twitter.android"               #Twitter
 )
 
 for APP in "${BLOAT[@]}"
