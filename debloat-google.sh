@@ -14,59 +14,73 @@ sleep 3
 ## Google Apps
 
 # DANGER Zone
-adb shell pm uninstall --user 0 com.google.android.gms #Play Services
-adb shell pm uninstall --user 0 com.google.android.gsf #Service Framework
-adb shell pm uninstall --user 0 com.google.android.gsf.login #Google Login Service
-adb shell pm uninstall --user 0 com.google.android.feedback #Market Feedback
-adb shell pm uninstall --user 0 com.google.android.tts #Google TTS
-adb shell pm uninstall --user 0 com.google.android.apps.pixelmigrate #Google Restore
-adb shell pm uninstall --user 0 com.google.android.backupuses #Google Backuptransport
-adb shell pm uninstall --user 0 com.google.android.backuptransport
-adb shell pm uninstall --user 0 com.google.android.syncadapters.contacts #Google Contacts Syncadapter
-adb shell pm uninstall --user 0 com.google.android.syncadapters.calendar #Google Calendar Syncadapter
-adb shell pm uninstall --user 0 com.google.android.gmsintegration #Play Services Integration
+BLOAT_DANGER=(
+    "com.google.android.gms"                     #Play Services
+    "com.google.android.gsf"                     #Service Framework
+    "com.google.android.gsf.login"               #Google Login Service
+    "com.google.android.feedback"                #Market Feedback
+    "com.google.android.tts"                     #Google TTS
+    "com.google.android.apps.pixelmigrate"       #Google Restore
+    "com.google.android.backupuses"              #Google Backuptransport
+    "com.google.android.backuptransport"
+    "com.google.android.syncadapters.contacts"   #Google Contacts Syncadapter
+    "com.google.android.syncadapters.calendar"   #Google Calendar Syncadapter
+    "com.google.android.gmsintegration"          #Play Services Integration
+)
 # DANGER Zone end
 
-adb shell pm uninstall --user 0 com.android.chrome #Google Chrome
-adb shell pm uninstall --user 0 com.google.android.apps.photos #Google Photos
-adb shell pm uninstall --user 0 com.google.android.gm #Gmail
-adb shell pm uninstall --user 0 com.google.android.googlequicksearchbox #Google App
-adb shell pm uninstall --user 0 com.google.android.apps.maps #Maps
-adb shell pm uninstall --user 0 com.google.android.music #Play Music
-adb shell pm uninstall --user 0 com.google.android.videos #Play Videos
-adb shell pm uninstall --user 0 com.google.android.youtube #YouTube
-adb shell pm uninstall --user 0 com.android.vending #Play Store
-adb shell pm uninstall --user 0 com.google.android.apps.docs #Drive
-adb shell pm uninstall --user 0 com.google.android.apps.tachyon #Duo
-adb shell pm uninstall --user 0 com.google.android.inputmethod.latin #Gboard
-adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.docs #Google Docs
-adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.sheets #Google Sheets
-adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.slides #Google Slides
-adb shell pm uninstall --user 0 com.google.android.keep #Notes
-adb shell pm uninstall --user 0 com.google.android.apps.googleassistant #Google Assistant
-adb shell pm uninstall --user 0 com.google.android.street #StreetView
-adb shell pm uninstall --user 0 com.google.android.apps.cloudprint #Google CloudPrint
-adb shell pm uninstall --user 0 com.google.android.apps.magazines #Magazines
-adb shell pm uninstall --user 0 com.google.android.apps.books #Books
-adb shell pm uninstall --user 0 com.google.android.apps.plus #Google+
-adb shell pm uninstall --user 0 com.google.android.play.games #Play Games
-adb shell pm uninstall --user 0 com.google.android.talk #Hangouts
-adb shell pm uninstall --user 0 com.google.android.apps.messaging #Google Messaging
-adb shell pm uninstall --user 0 com.google.android.marvin.talkback #Google Talkback
-adb shell pm uninstall --user 0 com.google.android.apps.wellbeing #Google Wellbeing
-adb shell pm uninstall --user 0 com.google.android.printservice.recommendation #Google Print Service
-adb shell pm uninstall --user 0 com.google.android.apps.calc #Google Calculator
-adb shell pm uninstall --user 0 com.google.android.calendar #Google Calendar
-adb shell pm uninstall --user 0 com.google.android.ar.lens #Google Lens
-adb shell pm uninstall --user 0 com.google.android.apps.translate #Google Translator
-adb shell pm uninstall --user 0 com.google.android.apps.fitness #Google Fit
-adb shell pm uninstall --user 0 com.google.android.apps.wallpaper #Google Wallpaper
-adb shell pm uninstall --user 0 com.google.android.apps.enterprise.dmagent #Google Apps Device Policy
-adb shell pm uninstall --user 0 com.google.android.apps.kids.familylink #Google Family Link
-adb shell pm uninstall --user 0 com.google.android.projection.gearhead #Android Car
-adb shell pm uninstall --user 0 com.google.android.ims #Carrier Services
-adb shell pm uninstall --user 0 com.google.ar.core # Google AR Core
-adb shell pm uninstall --user 0 com.google.android.apps.genie.geniewidget #NewsAndWeather
+for APP_DANGER in "${BLOAT_DANGER[@]}"
+do
+    adb shell pm uninstall --user 0 "$APP_DANGER"
+done
+
+BLOAT=(
+    "com.android.chrome"                                #Google Chrome
+    "com.google.android.apps.photos"                    #Google Photos
+    "com.google.android.gm"                             #Gmail
+    "com.google.android.googlequicksearchbox"           #Google App
+    "com.google.android.apps.maps"                      #Maps
+    "com.google.android.music"                          #Play Music
+    "com.google.android.videos"                         #Play Videos
+    "com.google.android.youtube"                        #YouTube
+    "com.android.vending"                               #Play Store
+    "com.google.android.apps.docs"                      #Drive
+    "com.google.android.apps.tachyon"                   #Duo
+    "com.google.android.inputmethod.latin"              #Gboard
+    "com.google.android.apps.docs.editors.docs"         #Google Docs
+    "com.google.android.apps.docs.editors.sheets"       #Google Sheets
+    "com.google.android.apps.docs.editors.slides"       #Google Slides
+    "com.google.android.keep"                           #Notes
+    "com.google.android.apps.googleassistant"           #Google Assistant
+    "com.google.android.street"                         #StreetView
+    "com.google.android.apps.cloudprint"                #Google CloudPrint
+    "com.google.android.apps.magazines"                 #Magazines
+    "com.google.android.apps.books"                     #Books
+    "com.google.android.apps.plus"                      #Google+
+    "com.google.android.play.games"                     #Play Games
+    "com.google.android.talk"                           #Hangouts
+    "com.google.android.apps.messaging"                 #Google Messaging
+    "com.google.android.marvin.talkback"                #Google Talkback
+    "com.google.android.apps.wellbeing"                 #Google Wellbeing
+    "com.google.android.printservice.recommendation"    #Google Print Service
+    "com.google.android.apps.calc"                      #Google Calculator
+    "com.google.android.calendar"                       #Google Calendar
+    "com.google.android.ar.lens"                        #Google Lens
+    "com.google.android.apps.translate"                 #Google Translator
+    "com.google.android.apps.fitness"                   #Google Fit
+    "com.google.android.apps.wallpaper"                 #Google Wallpaper
+    "com.google.android.apps.enterprise.dmagent"        #Google Apps Device Policy
+    "com.google.android.apps.kids.familylink"           #Google Family Link
+    "com.google.android.projection.gearhead"            #Android Car
+    "com.google.android.ims"                            #Carrier Services
+    "com.google.ar.core"                                #Google AR Core
+    "com.google.android.apps.genie.geniewidget"         #NewsAndWeather
+)
+
+for APP in "${BLOAT[@]}"
+do
+    adb shell pm uninstall --user 0 "$APP"
+done
 
 ## Stop ADB Connection
 adb kill-server

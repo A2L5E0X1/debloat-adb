@@ -13,14 +13,21 @@ sleep 3
 
 ## Facebook Parts
 # They are not needed even if you use Facebook
-adb shell pm uninstall --user 0 com.facebook.oxygen.installer #Facebook Installer
-adb shell pm uninstall --user 0 com.facebook.oxygen.services #Facebook Services
-adb shell pm uninstall --user 0 com.facebook.oxygen.appmanager #Facebook Appmanager
-adb shell pm uninstall --user 0 com.facebook.oxygen.system #Facebook System
-adb shell pm uninstall --user 0 com.facebook.system #Facebook System
-adb shell pm uninstall --user 0 com.facebook.appmanager #Facebook Appmanager
-adb shell pm uninstall --user 0 com.facebook.services #Facebook Services
-adb shell pm uninstall --user 0 com.facebook.installer #Facebook Installer
+FBBLOAT=(
+    "com.facebook.oxygen.installer"  #Facebook Installer
+    "com.facebook.oxygen.services"   #Facebook Services
+    "com.facebook.oxygen.appmanager" #Facebook Appmanager
+    "com.facebook.oxygen.system"     #Facebook System
+    "com.facebook.system"            #Facebook System
+    "com.facebook.appmanager"        #Facebook Appmanager
+    "com.facebook.services"          #Facebook Services
+    "com.facebook.installer"         #Facebook Installer
+)
+
+for APP in "${FBBLOAT[@]}"
+do
+    adb shell pm uninstall --user 0 "$APP"
+done
 
 ## Stop ADB Connection
 adb kill-server

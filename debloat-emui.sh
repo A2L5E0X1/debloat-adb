@@ -13,74 +13,84 @@ sleep 3
 
 ## EMUI Apps
 
-## DO NOT UNINSTALL ON EMUI 9 AND NEWER, OR QUICKSTEP WILL BE DEAD
-#adb shell pm uninstall --user 0 com.huawei.android.launcher
+BLOAT=(
+    #"com.huawei.android.launcher" # DO NOT UNINSTALL ON EMUI 9 AND NEWER, OR QUICKSTEP WILL BE DEAD
+    ## EMUI 5 Parts, P9 Lite
+    "com.huawei.android.thememanager"   #Designs
+    "com.huawei.android.chr"            #CHR Service
+    "com.huawei.motionservice"          #Motionshit
+    "com.nuance.swype.emui"             #EMUI Keyboard
+    "com.huawei.phoneservice"           #HiCare
+    "com.huawei.iconnect"               #iconnect (apple?)
+    "com.huawei.hwid"                   #Huawei Account Login
+    "com.huawei.android.instantshare"   #Huawei Share
+    "com.huawei.indexsearch.observer"   #indexsearch
+    "com.huawei.indexsearch"            #indexsearch
+    "com.huawei.vassistant"             #Voice Assistant
+    "com.huawei.watch.sync"             #WatchSync
+    "com.huawei.hwstartupguide"         #Startup Guide
+    "com.huawei.powergenie"             #PowerGenie (Kills Apps), see https://dontkillmyapp.com/huawei
+    "com.huawei.scanner"                #Scanner
+    "com.huawei.gamebox.global"
+    "com.huawei.appmarket"
+    "com.huawei.health"
+    "com.android.mediacenter"           #Music-Player
+    "com.huawei.hidisk"                 #Files
+    "com.huawei.KoBackup"               #Backup
+    "com.android.email"                 #E-Mail App
+    ## EMUI 8 Parts, P10 Lite
+    "com.huawei.hifolder"               #unknown
+    "com.huawei.android.tips"           #Tips
+    "com.huawei.synergy"                #unknown
+    "com.huawei.hiview"                 #unknown
+    "com.touchtype.swiftkey"            #SwiftKey
+    "com.huawei.nearby"                 #Nearby
+    "com.huawei.android.FloatTasks"     #unknown
+    "com.huawei.recsys"                 #unknown
+    "com.huawei.gameassistant"          #Gameassistant
+    "com.huawei.hiviewtunnel"           #unknown
+    "com.huawei.tips"                   #More Tips
+    "com.swiftkey.swiftkeyconfigurator" #SwiftKeyboard Part
+    "com.qeexo.smartshot"               #unknown
+    "com.huawei.android.instantonline"  #unknown
+    ## EMUI 10 Parts, Honor 10 Lite, thanks to mixboxmixing
+    "com.huawei.wallet"
+    "com.huawei.hivideo.overseas"
+    ## Gameloft Games
+    "com.gameloft.android.GloftAGMP"
+    "com.gameloft.android.GloftDBMF"
+    "com.gameloft.android.GloftPDMF"
+    "com.gameloft.android.GloftPZOR"
+    "com.gameloft.android.GloftSCCA"
+    "com.gameloft.android.GloftSCRT"
+    "com.gameloft.android.GloftSMIF"
+)
 
-## EMUI 5 Parts, P9 Lite
-adb shell pm uninstall --user 0 com.huawei.android.thememanager #Designs
-adb shell pm uninstall --user 0 com.huawei.android.chr #CHR Service
-adb shell pm uninstall --user 0 com.huawei.motionservice #Motionshit
-adb shell pm uninstall --user 0 com.nuance.swype.emui #EMUI Keyboard
-adb shell pm uninstall --user 0 com.huawei.phoneservice #HiCare
-adb shell pm uninstall --user 0 com.huawei.iconnect #iconnect (apple?)
-adb shell pm uninstall --user 0 com.huawei.hwid #Huawei Account Login
-adb shell pm uninstall --user 0 com.huawei.android.instantshare #Huawei Share
-adb shell pm uninstall --user 0 com.huawei.indexsearch.observer #indexsearch
-adb shell pm uninstall --user 0 com.huawei.indexsearch #indexsearch
-adb shell pm uninstall --user 0 com.huawei.vassistant #Voice Assistant
-adb shell pm uninstall --user 0 com.huawei.watch.sync #WatchSync
-adb shell pm uninstall --user 0 com.huawei.hwstartupguide #Startup Guide
-adb shell pm uninstall com.huawei.compass #Compass
-adb shell pm uninstall --user 0 com.huawei.powergenie #PowerGenie (Kills Apps), see https://dontkillmyapp.com/huawei
-adb shell pm uninstall --user 0 com.huawei.scanner #Scanner
-adb shell pm uninstall com.android.hwmirror #Mirror
-adb shell pm uninstall com.huawei.gamebox.global #HiGame
-adb shell pm uninstall --user 0 com.huawei.gamebox.global
-adb shell pm uninstall com.huawei.appmarket #AppGallery
-adb shell pm uninstall --user 0 com.huawei.appmarket
-adb shell pm uninstall com.huawei.health #Health
-adb shell pm uninstall --user 0 com.huawei.health
-adb shell pm uninstall --user 0 com.android.mediacenter #Music-Player
-adb shell pm uninstall --user 0 com.huawei.hidisk #Files
-adb shell pm uninstall --user 0 com.huawei.KoBackup #Backup
-adb shell pm uninstall com.huawei.KoBackup #Backup
-adb shell pm uninstall --user 0 com.android.email #E-Mail App
+for APP in "${BLOAT[@]}"
+do
+    adb shell pm uninstall --user 0 "$APP"
+done
 
-## EMUI 8 Parts, P10 Lite
-adb shell pm uninstall --user 0 com.huawei.hifolder #unknown
-adb shell pm uninstall --user 0 com.huawei.android.tips #Tips
-adb shell pm uninstall --user 0 com.huawei.synergy #unknown
-adb shell pm uninstall --user 0 com.huawei.hiview #unknown
-adb shell pm uninstall --user 0 com.touchtype.swiftkey #SwiftKey
-adb shell pm uninstall --user 0 com.huawei.nearby #Nearby
-adb shell pm uninstall --user 0 com.huawei.android.FloatTasks #unknown
-adb shell pm uninstall --user 0 com.huawei.recsys #unknown
-adb shell pm uninstall --user 0 com.huawei.gameassistant #Gameassistant
-adb shell pm uninstall --user 0 com.huawei.hiviewtunnel #unknown
-adb shell pm uninstall --user 0 com.huawei.tips #More Tips
-adb shell pm uninstall --user 0 com.swiftkey.swiftkeyconfigurator #SwiftKeyboard Part
-adb shell pm uninstall --user 0 com.qeexo.smartshot #unknown
-adb shell pm uninstall --user 0 com.huawei.android.instantonline #unknown
+USER_BLOAT=(
+    "com.huawei.health"                 #Health
+    "com.huawei.appmarket"              #AppGallery
+    "com.huawei.KoBackup"               #Backup
+    "com.gameloft.android.GloftAGMP"
+    "com.gameloft.android.GloftDBMF"
+    "com.gameloft.android.GloftPDMF"
+    "com.gameloft.android.GloftPZOR"
+    "com.gameloft.android.GloftSCCA"
+    "com.gameloft.android.GloftSCRT"
+    "com.gameloft.android.GloftSMIF"
+    "com.android.hwmirror"              #Mirror
+    "com.huawei.compass"                #Compass
+    "com.huawei.gamebox.global"         #HiGame
+)
 
-## EMUI 10 Parts, Honor 10 Lite, thanks to mixboxmixing
-adb shell pm uninstall --user 0 com.huawei.wallet
-adb shell pm uninstall --user 0 com.huawei.hivideo.overseas
-
-## Gameloft Games
-adb shell pm uninstall com.gameloft.android.GloftAGMP
-adb shell pm uninstall com.gameloft.android.GloftDBMF
-adb shell pm uninstall com.gameloft.android.GloftPDMF
-adb shell pm uninstall com.gameloft.android.GloftPZOR
-adb shell pm uninstall com.gameloft.android.GloftSCCA
-adb shell pm uninstall com.gameloft.android.GloftSCRT
-adb shell pm uninstall com.gameloft.android.GloftSMIF
-adb shell pm uninstall --user 0 com.gameloft.android.GloftAGMP
-adb shell pm uninstall --user 0 com.gameloft.android.GloftDBMF
-adb shell pm uninstall --user 0 com.gameloft.android.GloftPDMF
-adb shell pm uninstall --user 0 com.gameloft.android.GloftPZOR
-adb shell pm uninstall --user 0 com.gameloft.android.GloftSCCA
-adb shell pm uninstall --user 0 com.gameloft.android.GloftSCRT
-adb shell pm uninstall --user 0 com.gameloft.android.GloftSMIF
+for USER_APP in "${USER_BLOAT[@]}"
+do
+    adb shell pm uninstall "$USER_APP"
+done
 
 ## Stop ADB Connection
 adb kill-server

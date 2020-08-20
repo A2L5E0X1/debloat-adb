@@ -12,71 +12,78 @@ echo "Debloat will start soon..."
 sleep 3
 
 ## TouchWiz Apps
-adb shell pm uninstall --user 0 com.sec.android.gallery3d.panorama360view
-adb shell pm uninstall --user 0 com.samsung.aasaservice
-adb shell pm uninstall --user 0 com.samsung.android.allshare.service.fileshare
-adb shell pm uninstall --user 0 com.samsung.android.allshare.service.mediashare
-adb shell pm uninstall --user 0 com.sec.allsharecastplayer
-adb shell pm uninstall --user 0 com.samsung.android.app.sounddetector
-adb shell pm uninstall --user 0 com.sec.android.automotive.drivelinkremote
-adb shell pm uninstall --user 0 com.sec.android.automotive.drivelink
-adb shell pm uninstall --user 0 com.samsung.android.bbc.bbcagent
-adb shell pm uninstall --user 0 com.mobeam.barcodeService
-adb shell pm uninstall --user 0 com.samsung.android.beaconmanager
-adb shell pm uninstall --user 0 flipboard.boxer.app
-adb shell pm uninstall --user 0 flipboard.app
-adb shell pm uninstall --user 0 com.sec.enterprise.knox.cloudmdm.smdms
-adb shell pm uninstall --user 0 com.samsung.android.scloud.backup
-adb shell pm uninstall --user 0 com.samsung.android.scloud
-adb shell pm uninstall --user 0 com.sec.android.cloudagent
-adb shell pm uninstall --user 0 com.samsung.android.sdk.spenv10
-adb shell pm uninstall --user 0 com.sec.app.samsungprintservice
-adb shell pm uninstall --user 0 com.sec.android.easyonehand
-adb shell pm uninstall --user 0 com.sec.android.app.easylauncher
-adb shell pm uninstall --user 0 com.sec.android.widgetapp.easymodecontactswidget
-adb shell pm uninstall --user 0 com.sec.android.easysettings
-adb shell pm uninstall --user 0 com.sec.esdk.elm
-adb shell pm uninstall --user 0 com.sec.android.mimage.sstudio
-adb shell pm uninstall --user 0 com.sec.android.mimage.photoretouching
-adb shell pm uninstall --user 0 com.sec.android.widget.samsungapps
-adb shell pm uninstall --user 0 com.sec.android.app.samsungapps
-adb shell pm uninstall --user 0 com.samsung.android.nearby.mediaserver
-adb shell pm uninstall --user 0 com.samsung.android.asksmanager
-adb shell pm uninstall --user 0 com.samsung.groupcast
-adb shell pm uninstall --user 0 com.sec.android.app.shealth
-adb shell pm uninstall --user 0 com.sec.android.service.health
-adb shell pm uninstall --user 0 com.hrs.b2c.android
-adb shell pm uninstall --user 0 b2b.hrs.android.lib
-adb shell pm uninstall --user 0 com.goldengekko.edsa.herold
-adb shell pm uninstall --user 0 com.sec.android.app.sbrowser
-adb shell pm uninstall --user 0 com.sec.kidsplat.installer
-adb shell pm uninstall --user 0 com.sec.knox.foldercontainer
-adb shell pm uninstall --user 0 com.samsung.knox.appsupdateagent
-adb shell pm uninstall --user 0 com.sec.knox.knoxsetupwizardclient
-adb shell pm uninstall --user 0 com.sec.knox.switcher
-adb shell pm uninstall --user 0 com.samsung.knox.rcp.components
-adb shell pm uninstall --user 0 com.samsung.klmsagent
-adb shell pm uninstall --user 0 com.sec.enterprise.knox.attestation
-adb shell pm uninstall --user 0 tv.peel.smartremote
-adb shell pm uninstall --user 0 com.infraware.polarisviewer5
-adb shell pm uninstall --user 0 com.samsung.android.sconnect
-adb shell pm uninstall --user 0 com.samsung.android.personalpage.service
-adb shell pm uninstall --user 0 com.samsung.android.service.travel
-adb shell pm uninstall --user 0 com.vlingo.midas
-adb shell pm uninstall --user 0 com.sec.android.app.billing
-adb shell pm uninstall --user 0 com.sec.android.filter
-adb shell pm uninstall --user 0 com.sec.android.app.SamsungContentsAgent
-adb shell pm uninstall --user 0 com.sec.android.app.snsimagecache
-adb shell pm uninstall --user 0 com.sec.android.app.sns3
-adb shell pm uninstall --user 0 com.osp.app.signin
-adb shell pm uninstall --user 0 com.sec.android.inputmethod
-adb shell pm uninstall --user 0 com.samsung.android.securitylogagent
-adb shell pm uninstall --user 0 com.arcsoft.magicshotstudio
-adb shell pm uninstall --user 0 com.cleanmaster.sdk
-adb shell pm uninstall --user 0 com.sec.android.app.storycam
-adb shell pm uninstall --user 0 com.sec.android.app.tourviewer
-adb shell pm uninstall --user 0 com.sec.android.widgetapp.ap.hero.accuweather
-adb shell pm uninstall --user 0 com.samsung.android.app.withtv
+BLOAT=(
+    "com.sec.android.gallery3d.panorama360view"
+    "com.samsung.aasaservice"
+    "com.samsung.android.allshare.service.fileshare"
+    "com.samsung.android.allshare.service.mediashare"
+    "com.sec.allsharecastplayer"
+    "com.samsung.android.app.sounddetector"
+    "com.sec.android.automotive.drivelinkremote"
+    "com.sec.android.automotive.drivelink"
+    "com.samsung.android.bbc.bbcagent"
+    "com.mobeam.barcodeService"
+    "com.samsung.android.beaconmanager"
+    "flipboard.boxer.app"
+    "flipboard.app"
+    "com.sec.enterprise.knox.cloudmdm.smdms"
+    "com.samsung.android.scloud.backup"
+    "com.samsung.android.scloud"
+    "com.sec.android.cloudagent"
+    "com.samsung.android.sdk.spenv10"
+    "com.sec.app.samsungprintservice"
+    "com.sec.android.easyonehand"
+    "com.sec.android.app.easylauncher"
+    "com.sec.android.widgetapp.easymodecontactswidget"
+    "com.sec.android.easysettings"
+    "com.sec.esdk.elm"
+    "com.sec.android.mimage.sstudio"
+    "com.sec.android.mimage.photoretouching"
+    "com.sec.android.widget.samsungapps"
+    "com.sec.android.app.samsungapps"
+    "com.samsung.android.nearby.mediaserver"
+    "com.samsung.android.asksmanager"
+    "com.samsung.groupcast"
+    "com.sec.android.app.shealth"
+    "com.sec.android.service.health"
+    "com.hrs.b2c.android"
+    "b2b.hrs.android.lib"
+    "com.goldengekko.edsa.herold"
+    "com.sec.android.app.sbrowser"
+    "com.sec.kidsplat.installer"
+    "com.sec.knox.foldercontainer"
+    "com.samsung.knox.appsupdateagent"
+    "com.sec.knox.knoxsetupwizardclient"
+    "com.sec.knox.switcher"
+    "com.samsung.knox.rcp.components"
+    "com.samsung.klmsagent"
+    "com.sec.enterprise.knox.attestation"
+    "tv.peel.smartremote"
+    "com.infraware.polarisviewer5"
+    "com.samsung.android.sconnect"
+    "com.samsung.android.personalpage.service"
+    "com.samsung.android.service.travel"
+    "com.vlingo.midas"
+    "com.sec.android.app.billing"
+    "com.sec.android.filter"
+    "com.sec.android.app.SamsungContentsAgent"
+    "com.sec.android.app.snsimagecache"
+    "com.sec.android.app.sns3"
+    "com.osp.app.signin"
+    "com.sec.android.inputmethod"
+    "com.samsung.android.securitylogagent"
+    "com.arcsoft.magicshotstudio"
+    "com.cleanmaster.sdk"
+    "com.sec.android.app.storycam"
+    "com.sec.android.app.tourviewer"
+    "com.sec.android.widgetapp.ap.hero.accuweather"
+    "com.samsung.android.app.withtv"
+)
+
+for APP in "${BLOAT[@]}"
+do
+    adb shell pm uninstall --user 0 "$APP"
+done
 
 ## Stop ADB Connection
 adb kill-server
