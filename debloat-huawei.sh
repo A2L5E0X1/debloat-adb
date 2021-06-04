@@ -30,7 +30,6 @@ sleep 3
 # EMUI 5 Parts - VNS-L21C432B506
 adb shell pm uninstall --user 0 com.huawei.android.chr #CHR Service
 adb shell pm uninstall --user 0 com.huawei.motionservice #Motionservice
-adb shell pm uninstall --user 0 com.nuance.swype.emui #EMUI Keyboard
 adb shell pm uninstall --user 0 com.huawei.phoneservice #HiCare
 adb shell pm uninstall --user 0 com.huawei.iconnect #iconnect
 adb shell pm uninstall --user 0 com.huawei.hwid #Huawei Account Login
@@ -60,14 +59,12 @@ adb shell pm uninstall --user 0 com.huawei.hifolder #unknown
 adb shell pm uninstall --user 0 com.huawei.android.tips #Tips
 adb shell pm uninstall --user 0 com.huawei.synergy #unknown
 adb shell pm uninstall --user 0 com.huawei.hiview #unknown
-adb shell pm uninstall --user 0 com.touchtype.swiftkey #SwiftKey
 adb shell pm uninstall --user 0 com.huawei.nearby #Nearby
 adb shell pm uninstall --user 0 com.huawei.android.FloatTasks #unknown
 adb shell pm uninstall --user 0 com.huawei.recsys #unknown
 adb shell pm uninstall --user 0 com.huawei.gameassistant #Gameassistant
 adb shell pm uninstall --user 0 com.huawei.hiviewtunnel #unknown
 adb shell pm uninstall --user 0 com.huawei.tips #More Tips
-adb shell pm uninstall --user 0 com.swiftkey.swiftkeyconfigurator #SwiftKeyboard Part
 adb shell pm uninstall --user 0 com.qeexo.smartshot #unknown
 adb shell pm uninstall --user 0 com.huawei.android.instantonline #unknown
 
