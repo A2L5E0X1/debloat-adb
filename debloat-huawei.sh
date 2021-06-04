@@ -29,18 +29,24 @@ sleep 3
 
 # EMUI 5 Parts - VNS-L21C432B506
 adb shell pm uninstall --user 0 com.huawei.android.chr #CHR Service
-adb shell pm uninstall --user 0 com.huawei.motionservice #Motionservice
 adb shell pm uninstall --user 0 com.huawei.phoneservice #HiCare
 adb shell pm uninstall --user 0 com.huawei.iconnect #iconnect
 adb shell pm uninstall --user 0 com.huawei.hwid #Huawei Account Login
 adb shell pm uninstall --user 0 com.huawei.android.instantshare #Huawei Share
 adb shell pm uninstall --user 0 com.huawei.indexsearch.observer #indexsearch
 adb shell pm uninstall --user 0 com.huawei.indexsearch #indexsearch
-adb shell pm uninstall --user 0 com.huawei.vassistant #Voice Assistant
+adb shell pm uninstall --user 0 com.huawei.vassistant #HiVoice
 adb shell pm uninstall --user 0 com.huawei.watch.sync #WatchSync
 adb shell pm uninstall --user 0 com.huawei.hwstartupguide #Startup Guide
-adb shell pm uninstall --user 0 com.huawei.powergenie #PowerGenie
+adb shell pm uninstall --user 0 com.huawei.hwaps #HwAps
+adb shell pm uninstall --user 0 com.huawei.powergenie #Power Genius
 adb shell pm uninstall --user 0 com.huawei.scanner #Scanner
+adb shell pm uninstall --user 0 com.huawei.iaware #iAware
+adb shell pm uninstall --user 0 com.huawei.mmitest #MMITest
+adb shell pm uninstall --user 0 com.huawei.autoinstallapkfrommcc #Informations
+adb shell pm uninstall --user 0 com.android.partnerbrowsercustomizations.tmobile #T-Mobile Browser Customizations
+adb shell pm uninstall --user 0 com.huawei.trustagent #Smart unlock
+adb shell pm uninstall --user 0 com.huawei.wifiprobqeservice #HwWifiproBqeService
 adb shell pm uninstall com.huawei.compass #Compass
 adb shell pm uninstall --user 0 com.huawei.compass
 adb shell pm uninstall com.android.hwmirror #Mirror
@@ -54,23 +60,31 @@ adb shell pm uninstall --user 0 com.huawei.health
 adb shell pm uninstall com.huawei.KoBackup #Backup
 adb shell pm uninstall --user 0 com.huawei.KoBackup
 
-# EMUI 8 Parts - WAS-LX1C432
-adb shell pm uninstall --user 0 com.huawei.hifolder #unknown
+# EMUI 8 Parts - WAS-LX1 8.0.0.397(C432)
+adb shell pm uninstall --user 0 com.huawei.hifolder #AppAdvisor
 adb shell pm uninstall --user 0 com.huawei.android.tips #Tips
-adb shell pm uninstall --user 0 com.huawei.synergy #unknown
-adb shell pm uninstall --user 0 com.huawei.hiview #unknown
+adb shell pm uninstall --user 0 com.huawei.synergy #HwSynergy
+adb shell pm uninstall --user 0 com.huawei.hiview #HiView
 adb shell pm uninstall --user 0 com.huawei.nearby #Nearby
-adb shell pm uninstall --user 0 com.huawei.android.FloatTasks #unknown
-adb shell pm uninstall --user 0 com.huawei.recsys #unknown
+adb shell pm uninstall --user 0 com.huawei.intelligent #HUAWEI Assistant
+adb shell pm uninstall --user 0 com.huawei.recsys #HwIntelligentRecSystem
 adb shell pm uninstall --user 0 com.huawei.gameassistant #Gameassistant
-adb shell pm uninstall --user 0 com.huawei.hiviewtunnel #unknown
-adb shell pm uninstall --user 0 com.huawei.tips #More Tips
-adb shell pm uninstall --user 0 com.qeexo.smartshot #unknown
-adb shell pm uninstall --user 0 com.huawei.android.instantonline #unknown
+adb shell pm uninstall --user 0 com.huawei.hiviewtunnel #HiViewTunnel
+adb shell pm uninstall --user 0 com.huawei.tips #Tips
+adb shell pm uninstall --user 0 com.huawei.android.totemweather #Weather Data Service
+adb shell pm uninstall --user 0 com.huawei.android.totemweatherapp #Weather
+adb shell pm uninstall --user 0 com.huawei.android.totemweatherwidget #Weather Widget
+adb shell pm uninstall --user 0 com.huawei.trustcircle #Device authentication service
+adb shell pm uninstall --user 0 com.qeexo.smartshot #Smart screenshots
+adb shell pm uninstall --user 0 com.huawei.android.instantonline #HwInstantOnline
+adb shell pm uninstall --user 0 com.huawei.hicloud #Cloud
+adb shell pm uninstall --user 0 com.huawei.android.pushagent #Push Service
+adb shell pm uninstall --user 0 com.huawei.android.hwupgradeguide #HwUpgradeGuide
+adb shell pm uninstall --user 0 com.huawei.hwdetectrepair #Smart diagnosis
+adb shell pm uninstall --user 0 com.huawei.bd #HwUE
 
 # EMUI 10 Parts - HRY-LX1C432
 adb shell pm uninstall --user 0 com.huawei.wallet #Wallet
-adb shell pm uninstall --user 0 com.huawei.hivideo.overseas #HiVideo
 
 # Gameloft Games
 adb shell pm uninstall com.gameloft.android.GloftAGMP
