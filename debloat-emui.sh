@@ -4,28 +4,28 @@
 # This Script is by A2L5E0X1
 #
 
-# Intro
-echo "###################"
-echo "EMUI Debloat Script"
-echo "by A2L5E0X1        "
-echo "###################"
+echo "### EMUI Debloat Script"
+echo "### by A2L5E0X1        "
 sleep 1
 
-# Check if ADB is installed
+# Check for ADB
 if [ "$(which adb)" != "/usr/bin/adb" ]; then
-    echo "ADB not found! Please install it!" && exit 255
+    echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
 fi
 
+# Warning
+echo "IMPORTANT: Read README.md before you continue!"
+echo "Make sure USB-Debugging is enabled on your phone and it's connected to your PC."
+echo "If your PC can't find the phone, make sure your PC is authorized."
+echo "Press ENTER to continue. Press CTRL+C to exit."
+read
+
 # Waiting for Device
-echo "Please read README.md before you continue!"
-echo "Please enable ADB and connect your Phone with your Computer."
 adb wait-for-device
 echo "Device found!"
 adb devices
 echo "Debloat will start soon..."
 sleep 3
-
-# EMUI Apps
 
 # EMUI 5 Parts - VNS-L21C432B506
 adb shell pm uninstall --user 0 com.huawei.android.chr #CHR Service
@@ -40,19 +40,20 @@ adb shell pm uninstall --user 0 com.huawei.indexsearch #indexsearch
 adb shell pm uninstall --user 0 com.huawei.vassistant #Voice Assistant
 adb shell pm uninstall --user 0 com.huawei.watch.sync #WatchSync
 adb shell pm uninstall --user 0 com.huawei.hwstartupguide #Startup Guide
-adb shell pm uninstall com.huawei.compass #Compass
 adb shell pm uninstall --user 0 com.huawei.powergenie #PowerGenie
 adb shell pm uninstall --user 0 com.huawei.scanner #Scanner
+adb shell pm uninstall com.huawei.compass #Compass
+adb shell pm uninstall --user 0 com.huawei.compass
 adb shell pm uninstall com.android.hwmirror #Mirror
+adb shell pm uninstall --user 0 com.android.hwmirror
 adb shell pm uninstall com.huawei.gamebox.global #HiGame
 adb shell pm uninstall --user 0 com.huawei.gamebox.global
 adb shell pm uninstall com.huawei.appmarket #AppGallery
 adb shell pm uninstall --user 0 com.huawei.appmarket
 adb shell pm uninstall com.huawei.health #Health
 adb shell pm uninstall --user 0 com.huawei.health
-adb shell pm uninstall --user 0 com.huawei.KoBackup #Backup
 adb shell pm uninstall com.huawei.KoBackup #Backup
-adb shell pm uninstall --user 0 com.huawei.hidisk #Files
+adb shell pm uninstall --user 0 com.huawei.KoBackup
 
 # EMUI 8 Parts - WAS-LX1C432
 adb shell pm uninstall --user 0 com.huawei.hifolder #unknown
@@ -94,4 +95,6 @@ adb shell pm uninstall --user 0 com.gameloft.android.GloftSMIF
 adb kill-server
 
 # Success
-echo "Success"
+echo "Debloat success"
+echo "If you want to contribute, you can create an Issue or a Pull-Request :)"
+echo "https://github.com/A2L5E0X1/debloat-adb"

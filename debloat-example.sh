@@ -1,25 +1,34 @@
 #!/bin/bash
 
 #
-# This Script is by YOUR_GITHUB_USERNAME
+# REMOVE THIS AT PULL-REQUEST
+#
+# Please replace YOUR_GITHUB_USERNAME with your Github Username
+# Please keep same layout as my other Debloat-Scripts
 #
 
-# Intro
-echo "##############################"
-echo "Example Debloat Script        "
-echo "Thanks to YOUR_GITHUB_USERNAME"
-echo "by A2L5E0X1                   "
-echo "##############################"
+#
+# This Script is by A2L5E0X1 + YOUR_GITHUB_USERNAME
+#
+
+echo "### Example Debloat Script        "
+echo "### Thanks to YOUR_GITHUB_USERNAME"
+echo "### by A2L5E0X1                   "
 sleep 1
 
-# Check if ADB is installed
+# Check for ADB
 if [ "$(which adb)" != "/usr/bin/adb" ]; then
-    echo "ADB not found! Please install it!" && exit 255
+    echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
 fi
 
+# Warning
+echo "IMPORTANT: Read README.md before you continue!"
+echo "Make sure USB-Debugging is enabled on your phone and it's connected to your PC."
+echo "If your PC can't find the phone, make sure your PC is authorized."
+echo "Press ENTER to continue. Press CTRL+C to exit."
+read
+
 # Waiting for Device
-echo "Please read README.md before you continue!"
-echo "Please enable ADB and connect your Phone with your Computer."
 adb wait-for-device
 echo "Device found!"
 adb devices
@@ -33,4 +42,6 @@ adb shell pm uninstall --user 0 com.package.name #Please define AppName or what 
 adb kill-server
 
 # Success
-echo "Success"
+echo "Debloat success"
+echo "If you want to contribute, you can create an Issue or a Pull-Request :)"
+echo "https://github.com/A2L5E0X1/debloat-adb"
