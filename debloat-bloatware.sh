@@ -27,7 +27,7 @@ adb devices
 echo "Debloat will start soon..."
 sleep 3
 
-# Bloadware
+# Bloatware
 adb shell pm uninstall --user 0 com.hp.android.printservice #HP Printservice
 adb shell pm uninstall --user 0 com.mobilesrepublic.appy #NewsRepublic
 adb shell pm uninstall --user 0 com.facebook.katana #Facebook
@@ -41,6 +41,9 @@ adb shell pm uninstall --user 0 com.microsoft.skydrive #OneDrive
 adb shell pm uninstall --user 0 com.microsoft.office.powerpoint #MS Powerpoint
 adb shell pm uninstall --user 0 com.microsoft.office.outlook #MS Outlook
 adb shell pm uninstall --user 0 com.skype.raider #Skype
+adb shell pm uninstall --user 0 com.microsoft.office.officehubrow #Office
+adb shell pm uninstall --user 0 com.spotify.music #Spotify
+adb shell pm uninstall --user 0 com.netflix.mediaclient #Netflix
 
 # Disconnect ADB
 adb kill-server

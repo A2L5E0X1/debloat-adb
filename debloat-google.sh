@@ -45,6 +45,12 @@ adb shell pm uninstall --user 0 com.google.android.backuptransport
 adb shell pm uninstall --user 0 com.google.android.syncadapters.contacts #Google Contacts Syncadapter
 adb shell pm uninstall --user 0 com.google.android.syncadapters.calendar #Google Calendar Syncadapter
 adb shell pm uninstall --user 0 com.google.android.gmsintegration #Play Services Integration
+adb shell pm uninstall --user 0 com.google.android.overlay.gmsconfig #GMSOverlays
+adb shell pm uninstall --user 0 com.google.android.overlay.gmsgsaconfig
+adb shell pm uninstall --user 0 com.google.android.overlay.modules.documentsui
+adb shell pm uninstall --user 0 com.google.android.overlay.modules.ext.services
+adb shell pm uninstall --user 0 com.google.android.modulemetadata #MainComponents
+adb shell pm uninstall --user 0 com.google.android.setupwizard #Setup
 # DANGER Zone end
 
 adb shell pm uninstall --user 0 com.android.chrome #Google Chrome
@@ -87,6 +93,13 @@ adb shell pm uninstall --user 0 com.google.android.projection.gearhead #Android 
 adb shell pm uninstall --user 0 com.google.android.ims #Carrier Services
 adb shell pm uninstall --user 0 com.google.ar.core #Google AR Core
 adb shell pm uninstall --user 0 com.google.android.apps.genie.geniewidget #NewsAndWeather
+adb shell pm uninstall --user 0 com.google.android.gms.location.history #LocationHistory
+adb shell pm uninstall --user 0 com.google.ar.core #ARCore
+adb shell pm uninstall --user 0 com.google.android.apps.turbo #DeviceHealthService
+adb shell pm uninstall --user 0 com.google.android.as #DevicePersonalizationServices
+adb shell pm uninstall --user 0 com.android.hotwordenrollment.okgoogle #OKGoogleHotword
+adb shell pm uninstall --user 0 com.android.hotwordenrollment.xgoogle #XGoogleHotword
+adb shell pm uninstall --user 0 com.google.android.apps.youtube.music #YTMusic
 
 # Disconnect ADB
 adb kill-server
