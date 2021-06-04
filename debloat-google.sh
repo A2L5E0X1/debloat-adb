@@ -64,7 +64,6 @@ adb shell pm uninstall --user 0 com.google.android.youtube #YouTube
 adb shell pm uninstall --user 0 com.android.vending #Play Store
 adb shell pm uninstall --user 0 com.google.android.apps.docs #Drive
 adb shell pm uninstall --user 0 com.google.android.apps.tachyon #Duo
-adb shell pm uninstall --user 0 com.google.android.inputmethod.latin #Gboard
 adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.docs #Google Docs
 adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.sheets #Google Sheets
 adb shell pm uninstall --user 0 com.google.android.apps.docs.editors.slides #Google Slides
