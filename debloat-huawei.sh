@@ -94,6 +94,8 @@ adb shell pm uninstall com.gameloft.android.GloftPZOR
 adb shell pm uninstall com.gameloft.android.GloftSCCA
 adb shell pm uninstall com.gameloft.android.GloftSCRT
 adb shell pm uninstall com.gameloft.android.GloftSMIF
+adb shell pm uninstall com.gameloft.android.GloftANIF
+adb shell pm uninstall com.gameloft.android.GloftDMKF
 adb shell pm uninstall --user 0 com.gameloft.android.GloftAGMP
 adb shell pm uninstall --user 0 com.gameloft.android.GloftDBMF
 adb shell pm uninstall --user 0 com.gameloft.android.GloftPDMF
@@ -101,6 +103,8 @@ adb shell pm uninstall --user 0 com.gameloft.android.GloftPZOR
 adb shell pm uninstall --user 0 com.gameloft.android.GloftSCCA
 adb shell pm uninstall --user 0 com.gameloft.android.GloftSCRT
 adb shell pm uninstall --user 0 com.gameloft.android.GloftSMIF
+adb shell pm uninstall --user 0 com.gameloft.android.GloftANIF
+adb shell pm uninstall --user 0 com.gameloft.android.GloftDMKF
 
 # Disconnect ADB
 adb kill-server
