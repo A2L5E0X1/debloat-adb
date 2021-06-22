@@ -186,9 +186,6 @@ adb shell pm uninstall com.google.android.videos #PlayVideos
 adb shell pm uninstall com.google.android.photos #GooglePhotos
 adb shell pm uninstall com.google.android.youtube.music #YTMusic
 
-# Userdata Bloatware
-adb shell pm uninstall com.spotify.music #Spotify
-
 # Disconnect ADB
 adb kill-server
 
