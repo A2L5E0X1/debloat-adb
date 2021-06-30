@@ -22,6 +22,9 @@ read
 
 echo "LAST WARNING: THIS SCRIPT WILL REMOVE GOOGLE SERVICES AND PARTS AT DEFAULT!"
 echo "TO AVOID THIS, EDIT THE SCRIPT!"
+echo ""
+echo "[!] If you are actually going to uninstall Google Services, you have to disable all device administrator entries by Google else it will fail uninstalling them!"
+echo ""
 echo "Press ENTER to continue. Press CTRL+C to exit."
 read
 
