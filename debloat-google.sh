@@ -45,10 +45,6 @@ adb shell pm uninstall --user 0 com.google.android.backuptransport
 adb shell pm uninstall --user 0 com.google.android.syncadapters.contacts #Google Contacts Syncadapter
 adb shell pm uninstall --user 0 com.google.android.syncadapters.calendar #Google Calendar Syncadapter
 adb shell pm uninstall --user 0 com.google.android.gmsintegration #Play Services Integration
-adb shell pm uninstall --user 0 com.google.android.overlay.gmsconfig #GMSOverlays
-adb shell pm uninstall --user 0 com.google.android.overlay.gmsgsaconfig
-adb shell pm uninstall --user 0 com.google.android.overlay.modules.documentsui
-adb shell pm uninstall --user 0 com.google.android.overlay.modules.ext.services
 adb shell pm uninstall --user 0 com.google.android.modulemetadata #MainComponents
 adb shell pm uninstall --user 0 com.google.android.setupwizard #Setup
 # DANGER Zone end
