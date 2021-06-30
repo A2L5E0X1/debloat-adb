@@ -84,6 +84,7 @@ adb shell pm uninstall --user 0 com.huawei.hwdetectrepair #Smart diagnosis
 adb shell pm uninstall --user 0 com.huawei.bd #HwUE
 adb shell pm uninstall --user 0 com.hicloud.android.clone #Phone Clone
 adb shell pm uninstall --user 0 com.android.mediacenter #Huawei Music
+adb shell pm uninstall --user 0 com.huawei.himovie.overseas #Huawei Video
 
 # EMUI 10 Parts - HRY-LX1C432
 adb shell pm uninstall --user 0 com.huawei.wallet #Wallet
