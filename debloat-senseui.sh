@@ -40,7 +40,6 @@ adb shell pm uninstall --user 0 com.htc.flexnet #FlexNet
 adb shell pm uninstall --user 0 com.htc.mirrorlinkserver #HTC Mirrorlink
 adb shell pm uninstall --user 0 com.htc.dnatransfer #HTC Filetransfer
 adb shell pm uninstall --user 0 com.htc.task.gtask #Google Tasks
-adb shell pm uninstall --user 0 com.htc.sense.hsp #Sense Servicepack
 adb shell pm uninstall --user 0 com.htc.sense.socialnetwork.facebook #HTC Sense Facebook
 adb shell pm uninstall --user 0 com.htc.sense.socialnetwork.googleplus #HTC Sense Google Plus
 adb shell pm uninstall --user 0 com.htc.theme.font.xingothic_en #Font
