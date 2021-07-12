@@ -9,7 +9,7 @@ echo "### by A2L5E0X1        "
 sleep 1
 
 # Check for ADB
-if [ "$(which adb)" != "/usr/bin/adb" ]; then
+if [ "$(which adb)" != "/usr/local/bin/adb" ]; then
     echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
 fi
 
