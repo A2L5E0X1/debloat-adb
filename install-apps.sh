@@ -45,6 +45,6 @@ sleep 3
 adb kill-server
 
 # Success
-echo "Debloat success"
+echo "Install success"
 echo "If you want to contribute, you can create an Issue or a Pull-Request :)"
 echo "https://github.com/A2L5E0X1/debloat-adb"
