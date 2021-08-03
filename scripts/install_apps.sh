@@ -45,5 +45,5 @@ sleep 3
 adb kill-server
 
 # Success
-echo "Debloat success"
+echo "Install success"
 contribute_text
