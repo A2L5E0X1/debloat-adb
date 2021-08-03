@@ -1,0 +1,11 @@
+#!/bin/bash
+
+adb shell pm uninstall --user 0 com.zte.privacyzone #Privacy Zone
+adb shell pm uninstall --user 0 com.zte.zgesture #ZTE Gestures
+adb shell pm uninstall --user 0 com.zte.faceverify #Face Verify
+adb shell pm uninstall --user 0 com.zte.zdmdaemon #ZDM Daemon
+adb shell pm uninstall --user 0 com.zte.zdmdaemon.install #ZDM Installer
+adb shell pm uninstall --user 0 com.zte.handservice #ZTE Cares
+adb shell pm uninstall --user 0 com.zte.heartyservice.strategy #Speedup Service
+adb shell pm uninstall --user 0 com.zte.zdm #FOTA
+adb shell pm uninstall --user 0 com.zte.privacypolicy #Privacy

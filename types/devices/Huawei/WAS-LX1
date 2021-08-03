@@ -1,0 +1,45 @@
+#!/bin/bash
+
+# EMUI 8 Parts
+adb shell pm uninstall --user 0 com.huawei.hifolder #AppAdvisor
+adb shell pm uninstall --user 0 com.huawei.android.tips #Tips
+adb shell pm uninstall --user 0 com.huawei.synergy #HwSynergy
+adb shell pm uninstall --user 0 com.huawei.hiview #HiView
+adb shell pm uninstall --user 0 com.huawei.nearby #Nearby
+adb shell pm uninstall --user 0 com.huawei.intelligent #HUAWEI Assistant
+adb shell pm uninstall --user 0 com.huawei.recsys #HwIntelligentRecSystem
+adb shell pm uninstall --user 0 com.huawei.gameassistant #Gameassistant
+adb shell pm uninstall --user 0 com.huawei.hiviewtunnel #HiViewTunnel
+adb shell pm uninstall --user 0 com.huawei.tips #Tips
+adb shell pm uninstall --user 0 com.huawei.android.totemweather #Weather Data Service
+adb shell pm uninstall --user 0 com.huawei.android.totemweatherapp #Weather
+adb shell pm uninstall --user 0 com.huawei.android.totemweatherwidget #Weather Widget
+adb shell pm uninstall --user 0 com.huawei.trustcircle #Device authentication service
+adb shell pm uninstall --user 0 com.qeexo.smartshot #Smart screenshots
+adb shell pm uninstall --user 0 com.huawei.android.instantonline #HwInstantOnline
+adb shell pm uninstall --user 0 com.huawei.hicloud #Cloud
+adb shell pm uninstall --user 0 com.huawei.android.pushagent #Push Service
+adb shell pm uninstall --user 0 com.huawei.android.hwupgradeguide #HwUpgradeGuide
+adb shell pm uninstall --user 0 com.huawei.hwdetectrepair #Smart diagnosis
+adb shell pm uninstall --user 0 com.huawei.bd #HwUE
+adb shell pm uninstall --user 0 com.hicloud.android.clone #Phone Clone
+
+# Gameloft Games
+adb shell pm uninstall com.gameloft.android.GloftAGMP
+adb shell pm uninstall com.gameloft.android.GloftDBMF
+adb shell pm uninstall com.gameloft.android.GloftPDMF
+adb shell pm uninstall com.gameloft.android.GloftPZOR
+adb shell pm uninstall com.gameloft.android.GloftSCCA
+adb shell pm uninstall com.gameloft.android.GloftSCRT
+adb shell pm uninstall com.gameloft.android.GloftSMIF
+adb shell pm uninstall com.gameloft.android.GloftANIF
+adb shell pm uninstall com.gameloft.android.GloftDMKF
+adb shell pm uninstall --user 0 com.gameloft.android.GloftAGMP
+adb shell pm uninstall --user 0 com.gameloft.android.GloftDBMF
+adb shell pm uninstall --user 0 com.gameloft.android.GloftPDMF
+adb shell pm uninstall --user 0 com.gameloft.android.GloftPZOR
+adb shell pm uninstall --user 0 com.gameloft.android.GloftSCCA
+adb shell pm uninstall --user 0 com.gameloft.android.GloftSCRT
+adb shell pm uninstall --user 0 com.gameloft.android.GloftSMIF
+adb shell pm uninstall --user 0 com.gameloft.android.GloftANIF
+adb shell pm uninstall --user 0 com.gameloft.android.GloftDMKF
