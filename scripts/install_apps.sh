@@ -26,8 +26,8 @@ Press ENTER to continue. Press CTRL+C to exit."
 read
 
 # Fetching APKs
-if [ -d ./apps ]; then
-    rm -rf ./apps
+if [ -d ${script_path}/../apps ]; then
+    rm -rf ${script_path}/../apps
 fi
 git clone https://github.com/A2L5E0X1/apps
 
@@ -39,7 +39,7 @@ echo "Installation will start soon..."
 sleep 3
 
 # Start Installation
-./apps/install.sh
+bash ${script_path}/../apps/install.sh
 
 # Disconnect ADB
 adb kill-server
