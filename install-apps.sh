@@ -8,14 +8,18 @@ echo "### Appinstaller Script"
 echo "### by A2L5E0X1        "
 sleep 1
 
+# Config
+ADB="/usr/bin/adb"
+GIT="/usr/bin/git"
+
 # Check for ADB
-if [ "$(which adb)" != "/usr/bin/adb" ]; then
-    echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
+if [ "$(which adb)" != "$ADB" ]; then
+    echo "ERROR: ADB not found! Please install it or set correct ADB path!"; exit 255
 fi
 
-# Check for Git
-if [ "$(which git)" != "/usr/bin/git" ]; then
-    echo "ERROR: Git not found! Please install it or set correct PATH!" && exit 255
+# Check for GIT
+if [ "$(which git)" != "$GIT" ]; then
+    echo "ERROR: GIT not found! Please install it or set correct GIT path!"; exit 255
 fi
 
 # Warning
@@ -29,12 +33,12 @@ read
 if [ -d ./apps ]; then
     rm -rf ./apps
 fi
-git clone https://github.com/A2L5E0X1/apps
+"$GIT" clone https://github.com/A2L5E0X1/apps
 
 # Waiting for Device
-adb wait-for-device
+"$ADB" wait-for-device
 echo "Device found!"
-adb devices
+"$ADB" devices
 echo "Installation will start soon..."
 sleep 3
 
@@ -42,7 +46,7 @@ sleep 3
 ./apps/install.sh
 
 # Disconnect ADB
-adb kill-server
+"$ADB" kill-server
 
 # Success
 echo "Debloat success"

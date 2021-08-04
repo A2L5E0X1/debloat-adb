@@ -8,9 +8,12 @@ echo "### ZTE AOSP Debloat Script       "
 echo "### by A2L5E0X1                   "
 sleep 1
 
+# Config
+ADB="/usr/bin/adb"
+
 # Check for ADB
-if [ "$(which adb)" != "/usr/bin/adb" ]; then
-    echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
+if [ "$(which adb)" != "$ADB" ]; then
+    echo "ERROR: ADB not found! Please install it or set correct ADB path!"; exit 255
 fi
 
 # Warning
@@ -21,25 +24,25 @@ echo "Press ENTER to continue. Press CTRL+C to exit."
 read
 
 # Waiting for Device
-adb wait-for-device
+"$ADB" wait-for-device
 echo "Device found!"
-adb devices
+"$ADB" devices
 echo "Debloat will start soon..."
 sleep 3
 
 # ZTE AOSP (Blade A7 2019 Android 9)
-adb shell pm uninstall --user 0 com.zte.privacyzone #Privacy Zone
-adb shell pm uninstall --user 0 com.zte.zgesture #ZTE Gestures
-adb shell pm uninstall --user 0 com.zte.faceverify #Face Verify
-adb shell pm uninstall --user 0 com.zte.zdmdaemon #ZDM Daemon
-adb shell pm uninstall --user 0 com.zte.zdmdaemon.install #ZDM Installer
-adb shell pm uninstall --user 0 com.zte.handservice #ZTE Cares
-adb shell pm uninstall --user 0 com.zte.heartyservice.strategy #Speedup Service
-adb shell pm uninstall --user 0 com.zte.zdm #FOTA
-adb shell pm uninstall --user 0 com.zte.privacypolicy #Privacy
+"$ADB" shell pm uninstall --user 0 com.zte.privacyzone #Privacy Zone
+"$ADB" shell pm uninstall --user 0 com.zte.zgesture #ZTE Gestures
+"$ADB" shell pm uninstall --user 0 com.zte.faceverify #Face Verify
+"$ADB" shell pm uninstall --user 0 com.zte.zdmdaemon #ZDM Daemon
+"$ADB" shell pm uninstall --user 0 com.zte.zdmdaemon.install #ZDM Installer
+"$ADB" shell pm uninstall --user 0 com.zte.handservice #ZTE Cares
+"$ADB" shell pm uninstall --user 0 com.zte.heartyservice.strategy #Speedup Service
+"$ADB" shell pm uninstall --user 0 com.zte.zdm #FOTA
+"$ADB" shell pm uninstall --user 0 com.zte.privacypolicy #Privacy
 
 # Disconnect ADB
-adb kill-server
+"$ADB" kill-server
 
 # Success
 echo "Debloat success"

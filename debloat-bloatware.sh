@@ -8,9 +8,12 @@ echo "### Bloatware Debloat Script"
 echo "### by A2L5E0X1             "
 sleep 1
 
+# Config
+ADB="/usr/bin/adb"
+
 # Check for ADB
-if [ "$(which adb)" != "/usr/bin/adb" ]; then
-    echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
+if [ "$(which adb)" != "$ADB" ]; then
+    echo "ERROR: ADB not found! Please install it or set correct ADB path!"; exit 255
 fi
 
 # Warning
@@ -21,32 +24,32 @@ echo "Press ENTER to continue. Press CTRL+C to exit."
 read
 
 # Waiting for Device
-adb wait-for-device
+"$ADB" wait-for-device
 echo "Device found!"
-adb devices
+"$ADB" devices
 echo "Debloat will start soon..."
 sleep 3
 
 # Bloatware
-adb shell pm uninstall --user 0 com.hp.android.printservice #HP Printservice
-adb shell pm uninstall --user 0 com.mobilesrepublic.appy #NewsRepublic
-adb shell pm uninstall --user 0 com.facebook.katana #Facebook
-adb shell pm uninstall --user 0 com.facebook.orca #Messanger
-adb shell pm uninstall --user 0 com.twitter.android #Twitter
-adb shell pm uninstall --user 0 com.microsoft.office.word #MS Word
-adb shell pm uninstall --user 0 com.microsoft.office.onenote #MS OneNote
-adb shell pm uninstall --user 0 com.microsoft.office.excel #MS Excel
-adb shell pm uninstall --user 0 com.dropbox.android #Dropbox
-adb shell pm uninstall --user 0 com.microsoft.skydrive #OneDrive
-adb shell pm uninstall --user 0 com.microsoft.office.powerpoint #MS Powerpoint
-adb shell pm uninstall --user 0 com.microsoft.office.outlook #MS Outlook
-adb shell pm uninstall --user 0 com.skype.raider #Skype
-adb shell pm uninstall --user 0 com.microsoft.office.officehubrow #Office
-adb shell pm uninstall --user 0 com.spotify.music #Spotify
-adb shell pm uninstall --user 0 com.netflix.mediaclient #Netflix
+"$ADB" shell pm uninstall --user 0 com.hp.android.printservice #HP Printservice
+"$ADB" shell pm uninstall --user 0 com.mobilesrepublic.appy #NewsRepublic
+"$ADB" shell pm uninstall --user 0 com.facebook.katana #Facebook
+"$ADB" shell pm uninstall --user 0 com.facebook.orca #Messanger
+"$ADB" shell pm uninstall --user 0 com.twitter.android #Twitter
+"$ADB" shell pm uninstall --user 0 com.microsoft.office.word #MS Word
+"$ADB" shell pm uninstall --user 0 com.microsoft.office.onenote #MS OneNote
+"$ADB" shell pm uninstall --user 0 com.microsoft.office.excel #MS Excel
+"$ADB" shell pm uninstall --user 0 com.dropbox.android #Dropbox
+"$ADB" shell pm uninstall --user 0 com.microsoft.skydrive #OneDrive
+"$ADB" shell pm uninstall --user 0 com.microsoft.office.powerpoint #MS Powerpoint
+"$ADB" shell pm uninstall --user 0 com.microsoft.office.outlook #MS Outlook
+"$ADB" shell pm uninstall --user 0 com.skype.raider #Skype
+"$ADB" shell pm uninstall --user 0 com.microsoft.office.officehubrow #Office
+"$ADB" shell pm uninstall --user 0 com.spotify.music #Spotify
+"$ADB" shell pm uninstall --user 0 com.netflix.mediaclient #Netflix
 
 # Disconnect ADB
-adb kill-server
+"$ADB" kill-server
 
 # Success
 echo "Debloat success"

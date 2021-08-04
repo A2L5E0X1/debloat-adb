@@ -10,9 +10,12 @@ echo " "
 
 sleep 1
 
+# Config
+ADB="/usr/bin/adb"
+
 # Check for ADB
-if [ "$(which adb)" != "/usr/bin/adb" ]; then
-    echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
+if [ "$(which adb)" != "$ADB" ]; then
+    echo "ERROR: ADB not found! Please install it or set correct ADB path!"; exit 255
 fi
 
 # Warning
@@ -23,9 +26,9 @@ echo "Press ENTER to continue. Press CTRL+C to exit."
 read
 
 # Waiting for Device
-adb wait-for-device
+"$ADB" wait-for-device
 echo "Device found!"
-adb devices
+"$ADB" devices
 echo "Debloat will start soon..."
 sleep 3
 
@@ -34,27 +37,27 @@ sleep 3
 #
 
 # MIUI apps
-adb shell pm uninstall --user 0 com.mi.globalbrowser # Mi Browser
-adb shell pm uninstall --user 0 com.miui.notes # Mi Browser
-adb shell pm uninstall --user 0 com.xiaomi.mipicks # GetApps
-adb shell pm uninstall --user 0 com.miui.miwallpaper # Mi Wallpaper
-adb shell pm uninstall --user 0 com.xiaomi.midrop # Mi Drop
-adb shell pm uninstall --user 0 com.miui.compass # Compass
-adb shell pm uninstall --user 0 com.miui.securitycenter # Security
-adb shell pm uninstall --user 0 com.xiaomi.payment # Mi Coins
-adb shell pm uninstall --user 0 com.miui.fm # FM Radio
-adb shell pm uninstall --user 0 cn.wps.xiaomi.abroad.lite # Mi WPS Lite
-adb shell pm uninstall --user 0 com.miui.screenrecorder # Screenrecorder
-adb shell pm uninstall --user 0 com.miui.misound # Mi Sound
-adb shell pm uninstall --user 0 com.xiaomi.scanner # Scanner
-adb shell pm uninstall --user 0 com.miui.calculator # Calculator
-adb shell pm uninstall --user 0 com.duokan.phone.remotecontroller # Mi Remote controller
-adb shell pm uninstall --user 0 com.miui.android.fashiongallery # Carousel wallpapers
-adb shell pm uninstall --user 0 com.miui.videoplayer # Mi Videos
-adb shell pm uninstall --user 0 com.miui.player # Mi Music
+"$ADB" shell pm uninstall --user 0 com.mi.globalbrowser # Mi Browser
+"$ADB" shell pm uninstall --user 0 com.miui.notes # Mi Browser
+"$ADB" shell pm uninstall --user 0 com.xiaomi.mipicks # GetApps
+"$ADB" shell pm uninstall --user 0 com.miui.miwallpaper # Mi Wallpaper
+"$ADB" shell pm uninstall --user 0 com.xiaomi.midrop # Mi Drop
+"$ADB" shell pm uninstall --user 0 com.miui.compass # Compass
+"$ADB" shell pm uninstall --user 0 com.miui.securitycenter # Security
+"$ADB" shell pm uninstall --user 0 com.xiaomi.payment # Mi Coins
+"$ADB" shell pm uninstall --user 0 com.miui.fm # FM Radio
+"$ADB" shell pm uninstall --user 0 cn.wps.xiaomi.abroad.lite # Mi WPS Lite
+"$ADB" shell pm uninstall --user 0 com.miui.screenrecorder # Screenrecorder
+"$ADB" shell pm uninstall --user 0 com.miui.misound # Mi Sound
+"$ADB" shell pm uninstall --user 0 com.xiaomi.scanner # Scanner
+"$ADB" shell pm uninstall --user 0 com.miui.calculator # Calculator
+"$ADB" shell pm uninstall --user 0 com.duokan.phone.remotecontroller # Mi Remote controller
+"$ADB" shell pm uninstall --user 0 com.miui.android.fashiongallery # Carousel wallpapers
+"$ADB" shell pm uninstall --user 0 com.miui.videoplayer # Mi Videos
+"$ADB" shell pm uninstall --user 0 com.miui.player # Mi Music
 
 # Disconnect ADB
-adb kill-server
+"$ADB" kill-server
 
 # Success
 echo "Debloat success"

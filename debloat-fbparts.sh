@@ -8,9 +8,12 @@ echo "### Facebook Debloat Script"
 echo "### by A2L5E0X1            "
 sleep 1
 
+# Config
+ADB="/usr/bin/adb"
+
 # Check for ADB
-if [ "$(which adb)" != "/usr/bin/adb" ]; then
-    echo "ERROR: ADB not found! Please install it or set correct PATH!" && exit 255
+if [ "$(which adb)" != "$ADB" ]; then
+    echo "ERROR: ADB not found! Please install it or set correct ADB path!"; exit 255
 fi
 
 # Warning
@@ -21,24 +24,24 @@ echo "Press ENTER to continue. Press CTRL+C to exit."
 read
 
 # Waiting for Device
-adb wait-for-device
+"$ADB" wait-for-device
 echo "Device found!"
-adb devices
+"$ADB" devices
 echo "Debloat will start soon..."
 sleep 3
 
 # Facebook Parts, they are not needed, even if you are using Facebook
-adb shell pm uninstall --user 0 com.facebook.oxygen.installer #Facebook Installer
-adb shell pm uninstall --user 0 com.facebook.oxygen.services #Facebook Services
-adb shell pm uninstall --user 0 com.facebook.oxygen.appmanager #Facebook Appmanager
-adb shell pm uninstall --user 0 com.facebook.oxygen.system #Facebook System
-adb shell pm uninstall --user 0 com.facebook.system #Facebook System
-adb shell pm uninstall --user 0 com.facebook.appmanager #Facebook Appmanager
-adb shell pm uninstall --user 0 com.facebook.services #Facebook Services
-adb shell pm uninstall --user 0 com.facebook.installer #Facebook Installer
+"$ADB" shell pm uninstall --user 0 com.facebook.oxygen.installer #Facebook Installer
+"$ADB" shell pm uninstall --user 0 com.facebook.oxygen.services #Facebook Services
+"$ADB" shell pm uninstall --user 0 com.facebook.oxygen.appmanager #Facebook Appmanager
+"$ADB" shell pm uninstall --user 0 com.facebook.oxygen.system #Facebook System
+"$ADB" shell pm uninstall --user 0 com.facebook.system #Facebook System
+"$ADB" shell pm uninstall --user 0 com.facebook.appmanager #Facebook Appmanager
+"$ADB" shell pm uninstall --user 0 com.facebook.services #Facebook Services
+"$ADB" shell pm uninstall --user 0 com.facebook.installer #Facebook Installer
 
 # Disconnect ADB
-adb kill-server
+"$ADB" kill-server
 
 # Success
 echo "Debloat success"
