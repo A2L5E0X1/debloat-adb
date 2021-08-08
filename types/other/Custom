@@ -1,0 +1,4 @@
+#!/bin/bash
+# This is a custom Debloat file, remove "#" and add the package name
+
+#adb shell pm uninstall --user 0 your.app
