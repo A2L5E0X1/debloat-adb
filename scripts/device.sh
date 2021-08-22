@@ -64,6 +64,9 @@ clear
 echo -e "Now debload ${selected_device_brand} ${selected_device_model}\n"
 bash ${script_path}/../types/devices/${selected_device_brand}/${selected_device_model}
 
+# Disconnect ADB
+adb kill-server
+
 # Success
 echo "Debloat success"
 contribute_text

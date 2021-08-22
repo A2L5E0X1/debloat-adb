@@ -49,6 +49,9 @@ clear
 echo -e "Now debload Parts of ${selected_part}\n"
 bash ${script_path}/../types/devices/other/${selected_part}
 
+# Disconnect ADB
+adb kill-server
+
 # Success
 echo "Debloat success"
 contribute_text
