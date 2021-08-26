@@ -42,8 +42,8 @@ echo "Device found!"
 echo "Installation will start soon..."
 sleep 3
 
-# Start Installation
-./apps/install.sh
+# Install Apps
+for APKS in $(find ./apps/apk -name *.apk); do "$ADB" install "$APKS"; done
 
 # Disconnect ADB
 "$ADB" kill-server
