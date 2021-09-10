@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#
+# This Script is by A2L5E0X1 + Razuuu
+#
+
+# Get Variables and Functions
+. $(dirname "$(readlink -f "$0")")/../../scripts/variables_and_functions.sh
+
+echo "### ZTE AOSP Debloat Script
+### by A2L5E0X1 + Razuuu"
+sleep 1
+
+bloatware=(
+	# ZTE AOSP (Blade A7 2019 Android 9)
+	"com.zte.privacyzone"			#Privacy Zone
+	"com.zte.zgesture"			#ZTE Gestures
+	"com.zte.faceverify"			#Face Verify
+	"com.zte.zdmdaemon"			#ZDM Daemon
+	"com.zte.zdmdaemon.install"		#ZDM Installer
+	"com.zte.handservice"			#ZTE Cares
+	"com.zte.heartyservice.strategy"	#Speedup Service
+	"com.zte.zdm"				#FOTA
+	"com.zte.privacypolicy"			#Privacy
+)
+
+for app in ${bloatware[@]}
+do
+	$adb_location shell pm uninstall --user 0 $app
+	$adb_location shell pm uninstall $app
+done
