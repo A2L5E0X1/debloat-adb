@@ -12,7 +12,7 @@ Kind of, you can restore some apps by installing the original apk or you install
 
 ## You forgot an App! How can I add it to your Script?
 Thank you for telling! :)
-Create a Pull-Request to add missing apps or even make a script for a device/brand/UI that doesn't exist here yet. Please use the debloat-example.sh to make your own debloat-script.
+Create a Pull-Request to add missing apps or even make a script for a device/brand/UI that doesn't exist here yet. Please use the Example.sh to make your own debloat-script.
 
 ## Can I use this on Windows/MacOS?
 For Windows, you can use Cygwin or a Linux Subsystem (WSL, Windows 10 only)
