@@ -7,7 +7,7 @@
 # Get Variables and Functions
 . $(dirname "$(readlink -f "$0")")/../../scripts/variables_and_functions.sh
 
-echo "### EMUI Debloat Script
+echo "### Huawei Debloat Script
 ### by A2L5E0X1 + Razuuu"
 sleep 1
 
