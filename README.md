@@ -28,10 +28,10 @@ This is normal. Not all devices has all the same apps. It depends on your device
 
 ## What does install-apps.sh do?
 This script got moved to debloat-adb.sh ("Install Apps" option).  
-It installs some opensource alternatives which you can find on F-Droid and in the [apps repository](https://github.com/A2L5E0X1/apps). The script will clone and install the apps on your device.  
+It installs some opensource alternatives. For reference check [APPS.md](https://github.com/A2L5E0X1/debloat-adb/blob/master/APPS.md). The script will fetch and install the apps on your device.  
 I will try to keep the apps up-to-date there!  
-Note: In future I will deprecate the apps repository and the script will download the apks directly from F-Droid.
 
 ## I like your Debloat-Scripts! How can I support you?
 Well, I don't accept donations right now. But it would be nice if you share the repository with others and you fork or mark it.  
 I will accept all kind of contributions. Thanks for all contributions and support in general!
+

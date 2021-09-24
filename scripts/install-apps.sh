@@ -27,10 +27,28 @@ fi
 warning_message
 
 # Fetching APKs
-if [ -d ${script_path}/../apps ]; then
-    rm -rf ${script_path}/../apps
+if [ -d ${script_path}/../tmp ]; then
+    echo "Deleting old apks..."
+    rm -rf ${script_path}/../tmp/*.apk
+else
+    mkdir ${script_path}/../tmp
 fi
-$git_location clone https://github.com/A2L5E0X1/apps ${script_path}/../apps
+echo "Fetching APKs..."
+echo "For APK reference check APPS.md"
+applist=(
+	"Aurora.apk+https://files.auroraoss.com/AuroraStore/Stable/AuroraStore_4.0.7.apk"
+	"Bromite.apk+https://github.com/bromite/bromite/releases/download/92.0.4515.176/arm_ChromePublic.apk"
+	"F-Droid.apk+https://f-droid.org/repo/org.fdroid.fdroid_1014000.apk"
+	"K9Mail.apk+https://f-droid.org/repo/com.fsck.k9_29000.apk"
+	"MaterialFiles.apk+https://f-droid.org/repo/me.zhanghai.android.files_25.apk"
+	"Metro.apk+https://f-droid.org/repo/io.github.muntashirakon.Music_10503.apk"
+	"NewPipe.apk+https://archive.newpipe.net/fdroid/repo/NewPipe_v0.21.9.apk"
+	"OpenBoard.apk+https://f-droid.org/repo/org.dslul.openboard.inputmethod.latin_15.apk"
+	"QKSMS.apk+https://f-droid.org/repo/com.moez.QKSMS_2218.apk"
+	"SimpleGallery.apk+https://f-droid.org/repo/com.simplemobiletools.gallery.pro_348.apk"
+)
+
+for APPS in ${applist[@]}; do apks=$(echo $APPS | sed 's/+/ /g'); wget -O ${script_path}/../tmp/$apks; done
 
 # Waiting for Device
 echo "Waiting for device..."
@@ -41,7 +59,10 @@ echo "Installation will start soon..."
 sleep 3
 
 # Install Apps
-for APKS in $(find ${script_path}/../apps/apk -name *.apk); do $adb_location install $APKS; done
+for APKS in $(find ${script_path}/../tmp -name *.apk)
+do
+	$adb_location install $APKS
+done
 
 # Disconnect ADB
 $adb_location kill-server

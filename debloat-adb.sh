@@ -22,7 +22,7 @@ while true; do
     case $select in
         [Dd]* ) run_script device; break;;
 	[Oo]* ) run_script other; break;;
-        [Ii]* ) run_script install-apps break;;
+        [Ii]* ) run_script install-apps; break;;
         [Ee]* ) echo "Exit script!"; exit 1;;
         * ) echo "No option selected!";;
     esac
