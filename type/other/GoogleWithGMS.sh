@@ -14,9 +14,15 @@ sleep 1
 red_message "LAST WARNING: THIS SCRIPT **WILL** REMOVE GOOGLE SERVICES AND GOOGLE PLAY!
 IF YOU WANT TO KEEP THEM, USE THE GoogleWithoutGMS SCRIPT INSTEAD!
 
-[!] If you are actually going to uninstall Google Services, you have to disable all device administrator entries by Google else it will fail uninstalling them!"
-
 Press ENTER to continue. Press CTRL+C to exit."
+read
+
+# Start device administrators activity
+$adb_location shell am start com.android.settings/.DeviceAdminSettings
+
+echo "On your device, the device administrator settings should show up now. If it doesn't, please report this in an github issue including your device, OEM skin and Android-Version.
+Disable all entries by Google (e.g. Find my Device or Google Pay).
+If it's done, press ENTER to continue!"
 read
 
 # Disable GMS package to avoid issues with some apps
