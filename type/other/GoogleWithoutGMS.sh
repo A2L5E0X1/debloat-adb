@@ -11,33 +11,13 @@ echo "### Google Debloat Script
 ### by A2L5E0X1 + Razuuu"
 sleep 1
 
-red_message "LAST WARNING: THIS SCRIPT WILL REMOVE GOOGLE SERVICES AND PARTS AT DEFAULT!
-TO AVOID THIS, EDIT THE SCRIPT!
-
-[!] If you are actually going to uninstall Google Services, you have to disable all device administrator entries by Google else it will fail uninstalling them!"
+red_message "Note: This script **won't** uninstall Google Services and Google Play Store.
+If you want to uninstall them as well, use the GoogleWithGMS script instead!
 
 Press ENTER to continue. Press CTRL+C to exit."
 read
 
 bloatware=(
-	# Google Apps
-
-	# DANGER Zone
-	"com.google.android.gms"				#Play Services
-	"com.google.android.gsf"				#Service Framework
-	"com.google.android.gsf.login"				#Google Login Service
-	"com.google.android.feedback"				#Market Feedback
-	"com.google.android.tts"				#Google TTS
-	"com.google.android.apps.pixelmigrate"			#Google Restore
-	"com.google.android.backupuses"				#Google Backuptransport
-	"com.google.android.backuptransport"
-	"com.google.android.syncadapters.contacts"		#Google Contacts Syncadapter
-	"com.google.android.syncadapters.calendar"		#Google Calendar Syncadapter
-	"com.google.android.gmsintegration"			#Play Services Integration
-	"com.google.android.modulemetadata"			#MainComponents
-	"com.google.android.setupwizard"			#Setup
-	# DANGER Zone end
-
 	"com.android.chrome"					#Google Chrome
 	"com.google.android.apps.photos"			#Google Photos
 	"com.google.android.gm"					#Gmail
@@ -84,6 +64,7 @@ bloatware=(
 	"com.android.hotwordenrollment.okgoogle"		#OKGoogleHotword
 	"com.android.hotwordenrollment.xgoogle"			#XGoogleHotword
 	"com.google.android.apps.youtube.music"			#YTMusic
+	"com.google.android.tts"				#Google TTS
 )
 
 for app in ${bloatware[@]}
