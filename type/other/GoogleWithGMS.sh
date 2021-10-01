@@ -19,6 +19,9 @@ IF YOU WANT TO KEEP THEM, USE THE GoogleWithoutGMS SCRIPT INSTEAD!
 Press ENTER to continue. Press CTRL+C to exit."
 read
 
+# Disable GMS package to avoid issues with some apps
+$adb_location shell pm disable-user com.google.android.gms
+
 bloatware=(
 	# Google Apps
 
