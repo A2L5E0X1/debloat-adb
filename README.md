@@ -17,7 +17,7 @@ Thank you for telling! :)
 Create a Pull-Request to add missing apps or even make a script for a device/brand/UI that doesn't exist here yet. Please use the Example.sh to make your own debloat-script.
 
 ## Can I use this on Windows/MacOS?
-For Windows, you can use Cygwin or a Linux Subsystem (WSL, Windows 10 only)  
+For Windows, you can use Cygwin (confirmed to work). WSL won't work because it doesn't have USB support.  
 On Darwin based Systems (e.g. MacOS) it works like on Linux. Thanks to @stefan-najdovski.
 
 ## Which devices are supported?
