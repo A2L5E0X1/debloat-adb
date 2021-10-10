@@ -14,14 +14,16 @@ sleep 1
 bloatware=(
 	# ZTE AOSP (Blade A7 2019 Android 9)
 	"com.zte.privacyzone"			#Privacy Zone
-	"com.zte.zgesture"			#ZTE Gestures
-	"com.zte.faceverify"			#Face Verify
-	"com.zte.zdmdaemon"			#ZDM Daemon
-	"com.zte.zdmdaemon.install"		#ZDM Installer
 	"com.zte.handservice"			#ZTE Cares
 	"com.zte.heartyservice.strategy"	#Speedup Service
-	"com.zte.zdm"				#FOTA
 	"com.zte.privacypolicy"			#Privacy
+	"zte.com.cn.filer"			#Filemanager
+	"cn.zte.recorder"			#Recorder
+	"com.ume.browser.cust"			#UmeBrowser
+	"com.zte.videoplayer"			#Video
+	"com.hermes.superb.oem"			#Superb Cleaner
+	"com.icoolme.bestweather"		#BestWeather
+	"com.android.mipop"			#Z-POP
 )
 
 for app in ${bloatware[@]}
