@@ -37,6 +37,7 @@ bloatware=(
 	"com.google.android.gsf.login"				#Google Login Service
 	"com.google.android.feedback"				#Market Feedback
 	"com.google.android.apps.pixelmigrate"			#Google Restore
+	"com.google.android.apps.restore"
 	"com.google.android.backupuses"				#Google Backuptransport
 	"com.google.android.backuptransport"
 	"com.google.android.syncadapters.contacts"		#Google Contacts Syncadapter
@@ -44,6 +45,8 @@ bloatware=(
 	"com.google.android.gmsintegration"			#Play Services Integration
 	"com.google.android.modulemetadata"			#MainComponents
 	"com.google.android.setupwizard"			#Setup
+	"com.google.android.partnersetup"			#PartnerSetup
+	"com.google.android.gms.policy_sidecar_aps"		#GMS Part
 	# DANGER Zone end
 
 	"com.android.chrome"					#Google Chrome
