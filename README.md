@@ -6,7 +6,7 @@ Thanks to @Razuuu for improving this project.
 If you have problems or your device bootloops/crashes after using the script, please report it and don't blame me. **YOU** are using my debloat-scripts. It's important to **read the README** to get all needed informations. If your device stops working, you probably need to hardreset it. Please backup all apps you uninstall with [APK Extractor](https://f-droid.org/en/packages/axp.tool.apkextractor/) and your internal storage!
 
 ## How to use?
-Download the repository using git cli or github web. Then install ADB and run `./debloat-adb.sh' and choose what you want to remove. Before using the script, edit the script in script/{devices,others}/xxx.sh and remove the apps you want to keep! (just put a # in front of the line or remove it.)
+Download the repository using git cli or github web. Then install ADB and run `./debloat-adb.sh' and choose what you want to remove. Before using the script, edit it in type/xxx.sh and remove the apps you want to keep! (just put a # in front of the line or remove it.)
 
 ## Can I restore uninstalled Apps?
 Kind of, you can restore some apps by installing the original apk or you install them with Google Play. On some devices, you can't restore some apps. If you can't restore the App you want, you need the hardreset the device! So please be careful.  
