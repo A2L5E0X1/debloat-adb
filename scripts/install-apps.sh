@@ -1,7 +1,7 @@
 #!/bin/bash
 
 #
-# This Script is by A2L5E0X1
+# This Script is by A2L5E0X1 + Razuuu
 #
 
 # Get Variables and Functions
@@ -9,7 +9,7 @@
 
 clear
 echo "### Appinstaller Script
-### by A2L5E0X1"
+### by A2L5E0X1 + Razuuu"
 sleep 1
 
 

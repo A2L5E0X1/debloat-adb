@@ -11,7 +11,7 @@ bash scripts/${@}.sh
 
 clear
 echo "### ADB Debloat
-### by A2L5E0X1"
+### by A2L5E0X1 + Razuuu"
 sleep 1
 
 echo -e "\nSelect an option\n"
