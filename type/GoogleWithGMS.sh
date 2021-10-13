@@ -5,19 +5,50 @@
 #
 
 # Get Variables and Functions
-. $(dirname "$(readlink -f "$0")")/../../scripts/variables_and_functions.sh
+. $(dirname "$(readlink -f "$0")")/../scripts/variables_and_functions.sh
 
 echo "### Google Debloat Script
 ### by A2L5E0X1 + Razuuu"
 sleep 1
 
-red_message "Note: This script **won't** uninstall Google Services and Google Play Store.
-If you want to uninstall them as well, use the GoogleWithGMS script instead!
+red_message "LAST WARNING: THIS SCRIPT **WILL** REMOVE GOOGLE SERVICES AND GOOGLE PLAY!
+IF YOU WANT TO KEEP THEM, USE THE GoogleWithoutGMS SCRIPT INSTEAD!
 
 Press ENTER to continue. Press CTRL+C to exit."
 read
 
+# Start device administrators activity
+$adb_location shell am start com.android.settings/.DeviceAdminSettings
+
+echo "On your device, the device administrator settings should show up now. If it doesn't, please report this in an github issue including your device, OEM skin and Android-Version.
+Disable all entries by Google (e.g. Find my Device or Google Pay).
+If it's done, press ENTER to continue!"
+read
+
+# Disable GMS package to avoid issues with some apps
+$adb_location shell pm disable-user com.google.android.gms
+
 bloatware=(
+	# Google Apps
+
+	# DANGER Zone
+	"com.google.android.gms"				#Play Services
+	"com.google.android.gsf"				#Service Framework
+	"com.google.android.gsf.login"				#Google Login Service
+	"com.google.android.feedback"				#Market Feedback
+	"com.google.android.apps.pixelmigrate"			#Google Restore
+	"com.google.android.apps.restore"
+	"com.google.android.backupuses"				#Google Backuptransport
+	"com.google.android.backuptransport"
+	"com.google.android.syncadapters.contacts"		#Google Contacts Syncadapter
+	"com.google.android.syncadapters.calendar"		#Google Calendar Syncadapter
+	"com.google.android.gmsintegration"			#Play Services Integration
+	"com.google.android.modulemetadata"			#MainComponents
+	"com.google.android.setupwizard"			#Setup
+	"com.google.android.partnersetup"			#PartnerSetup
+	"com.google.android.gms.policy_sidecar_aps"		#GMS Part
+	# DANGER Zone end
+
 	"com.android.chrome"					#Google Chrome
 	"com.google.android.apps.photos"			#Google Photos
 	"com.google.android.gm"					#Gmail
@@ -72,4 +103,3 @@ do
 	$adb_location shell pm uninstall --user 0 $app
 	$adb_location shell pm uninstall $app
 done
-

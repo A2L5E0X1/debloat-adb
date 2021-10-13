@@ -10,7 +10,7 @@
 #
 
 # Get Variables and Functions
-. $(dirname "$(readlink -f "$0")")/../../scripts/variables_and_functions.sh
+. $(dirname "$(readlink -f "$0")")/../scripts/variables_and_functions.sh
 
 # bloatware=(
 #	"com.example.1"	# Your App 1

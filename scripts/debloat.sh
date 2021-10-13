@@ -6,10 +6,10 @@
 
 # Get Variables and Functions
 . $(dirname "$(readlink -f "$0")")/variables_and_functions.sh
-devices=$(ls ${script_path}/../type/device)
+types=$(ls ${script_path}/../type)
 
 clear
-echo "### Device Debloat Script
+echo "### Debloat Script
 ### by A2L5E0X1 + Razuuu"
 sleep 1
 
@@ -29,23 +29,23 @@ echo "Device found!"
 $adb_location devices
 echo
 
-# Show all supported Devices
-echo "Currently supported devices:"
-for i in ${devices}; do echo "· $(echo ${i} | sed 's/\.[^.]*$//')"; done
+# Show all available types
+echo "Currently available types:"
+for i in ${types}; do echo "· $(echo ${i} | sed 's/\.[^.]*$//')"; done
 echo
 
-# Select Device
-echo "Which Device?"; read -p " » " select_device
-selected_device=$(ls ${script_path}/../type/device/ | grep -i $select_device | sed 's/\.[^.]*$//')
+# Select Type
+echo "Enter Type"; read -p " » " select_type
+selected_type=$(ls ${script_path}/../type | grep -i $select_type | sed 's/\.[^.]*$//')
 
-# Fail if device not found
-if [ ${selected_device} != $devices | grep -i ${select_device} ]; then
-  echo -e "\nDevice not found!"; contribute_text; exit 1
+# Fail if type not found
+if [ ${selected_type} != $types | grep -i ${select_type} ]; then
+  echo -e "\nType not found!"; exit 1
 fi
 
 # Start debloat
 clear
-bash ${script_path}/../type/device/${selected_device}.sh
+bash ${script_path}/../type/${selected_type}.sh
 
 # Disconnect ADB
 $adb_location kill-server

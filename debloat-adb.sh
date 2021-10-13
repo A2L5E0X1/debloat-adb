@@ -17,11 +17,10 @@ sleep 1
 echo -e "\nSelect an option\n"
 
 while true; do
-		echo "(D)evice Debloat | (O)ther Debloat | (I)nstall Apps"
+		echo "(D)eblot | (I)nstall Apps"
     read -p " » " select
     case $select in
-        [Dd]* ) run_script device; break;;
-	[Oo]* ) run_script other; break;;
+        [Dd]* ) run_script debloat; break;;
         [Ii]* ) run_script install-apps; break;;
         [Ee]* ) echo "Exit script!"; exit 1;;
         * ) echo "No option selected!";;

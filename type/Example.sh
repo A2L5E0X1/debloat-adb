@@ -12,7 +12,7 @@
 #
 
 # Get Variables and Functions
-. $(dirname "$(readlink -f "$0")")/../../scripts/variables_and_functions.sh
+. $(dirname "$(readlink -f "$0")")/../scripts/variables_and_functions.sh
 
 echo "### Example Debloat Script
 ### by A2L5E0X1 + Razuuu
