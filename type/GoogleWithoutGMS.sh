@@ -26,7 +26,6 @@ bloatware=(
 	"com.google.android.music"				#Play Music
 	"com.google.android.videos"				#Play Videos
 	"com.google.android.youtube"				#YouTube
-	"com.android.vending"					#Play Store
 	"com.google.android.apps.docs"				#Drive
 	"com.google.android.apps.tachyon"			#Duo
 	"com.google.android.apps.docs.editors.docs"		#Google Docs
