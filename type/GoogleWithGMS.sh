@@ -89,7 +89,6 @@ bloatware=(
 	"com.google.ar.core"					#Google AR Core
 	"com.google.android.apps.genie.geniewidget"		#NewsAndWeather
 	"com.google.android.gms.location.history"		#LocationHistory
-	"com.google.ar.core"					#ARCore
 	"com.google.android.apps.turbo"				#DeviceHealthService
 	"com.google.android.as"					#DevicePersonalizationServices
 	"com.android.hotwordenrollment.okgoogle"		#OKGoogleHotword
