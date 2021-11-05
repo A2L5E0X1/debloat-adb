@@ -76,6 +76,7 @@ bloatware=(
 	"com.gameloft.android.GloftSMIF"
 	"com.gameloft.android.GloftANIF"
 	"com.gameloft.android.GloftDMKF"
+	"com.gameloft.android.GloftANPH"
 )
 
 for app in ${bloatware[@]}
