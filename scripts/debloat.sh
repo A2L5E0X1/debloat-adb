@@ -31,7 +31,11 @@ echo
 
 # Show all available types
 echo "Currently available types:"
-for i in ${types}; do echo "· $(echo ${i} | sed 's/\.[^.]*$//')"; done
+for i in ${types}; do
+if [ ! ${i} == "Example.sh" ]; then
+echo "· $(echo ${i} | sed 's/\.[^.]*$//')"
+fi
+done
 echo
 
 # Select Type
