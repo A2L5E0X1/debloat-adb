@@ -17,7 +17,7 @@ sleep 1
 echo -e "\nSelect an option\n"
 
 while true; do
-		echo "(D)eblot | (I)nstall Apps"
+		echo "(D)ebloat | (I)nstall Apps"
     read -p " » " select
     case $select in
         [Dd]* ) run_script debloat; break;;
