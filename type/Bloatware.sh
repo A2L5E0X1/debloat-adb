@@ -29,6 +29,8 @@ bloatware=(
 	"com.microsoft.office.officehubrow"	#Office
 	"com.spotify.music"			#Spotify
 	"com.netflix.mediaclient"		#Netflix
+	"com.microsoft.appmanager"		#YourPhone
+	"com.linkedin.android"			#LinkedIn
 )
 
 for app in ${bloatware[@]}
