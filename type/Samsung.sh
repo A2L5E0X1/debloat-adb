@@ -35,7 +35,7 @@ bloatware=(
 	"com.sec.android.app.samsungapps"			#SamsungApps
 	"com.samsung.android.nearby.mediaserver"		#NearbyMediaserver
 	"com.samsung.android.asksmanager"			#AsksManager
-	"com.samsung.groupcast" 				#GroupCast
+	"com.samsung.groupcast"					#GroupCast
 	"com.sec.android.app.shealth"				#SHealthApp
 	"com.sec.android.service.health"			#SHealthService
 	"com.hrs.b2c.android"					#HRS
@@ -70,19 +70,15 @@ bloatware=(
 	"com.sec.android.widgetapp.samsungapps"			#GalaxyEssentialsWidget
 	"com.samsung.android.themestore"			#GalaxyThemes
 	"com.sec.android.app.chromecustomizations"		#ChromeCustomizations
-	"com.samsung.android.app.cocktailbarservice"		#EdgePanels
 	"com.samsung.android.aremoji"				#AREmoji
-	"com.skms.android.agent"				#SKMSAgentService
 	"com.samsung.android.mapsagent"				#ApplicationRecommendations
 	"com.samsung.android.service.livedrawing"		#LiveMessages
 	"com.samsung.android.kidsinstaller"			#KidsInstaller
 	"com.samsung.sree"					#GlobalGoals
 	"com.samsung.android.game.gamehome"			#GameLauncher
-	"com.samsung.android.app.desktoplauncher"		#DexHome
 	"com.sec.android.daemonapp"				#Weather
 	"de.axelspringer.yana.zeropage"				#upday
 	"com.samsung.android.app.watchmanager"			#Wearable
-	"com.samsung.SMT"					#TTS
 	"com.samsung.android.net.wifi.wifiguider"		#WifiTips
 	"com.samsung.android.bixby.service"			#BixbyDictation
 	"com.samsung.android.app.tips"				#Tips
@@ -90,19 +86,14 @@ bloatware=(
 	"com.samsung.android.hmt.vrsvc"				#GearVRService
 	"com.samsung.android.game.gametools"			#GameBooster
 	"com.samsung.android.app.simplesharing"			#LinkSharing
-	"com.samsung.android.service.peoplestripe"		#People
 	"com.samsung.android.app.reminder"			#Reminder
-	"com.sec.android.desktopmode.uiservice"			#DeX
-	"com.samsung.android.app.taskedge"			#Tasks
 	"com.samsung.android.ardrawing"				#ARDoodle
 	"com.samsung.android.ipsgeofence"			#SamsungVisitIn
 	"com.samsung.android.themecenter"			#ThemeCenter
 	"com.epicgames.portal"					#FortniteInstaller
 	"com.sec.spp.push"					#SamsungPushService
 	"com.samsung.android.app.routines"			#BixbyRoutines
-	"com.sec.android.app.dexonpc"				#DexForPC
 	"com.samsung.android.arzone"				#ARZone
-	"com.samsung.android.game.gos"				#GameOptimizingService
 	"com.samsung.android.forest"				#DigitalWellbeing
 	"com.samsung.android.galaxy"				#GalaxyShop
 	"com.samsung.android.beaconmanager"			#SmartThings
@@ -123,13 +114,21 @@ bloatware=(
 	"com.samsung.android.svoiceime"				#VoiceInput
 	"com.samsung.android.mateagent"				#GalaxyFriends
 	"com.hiya.star"						#HiyaService
-	"com.samsung.android.app.appsedge"			#Apps
 	"com.samsung.android.samsungpassautofill"		#SamsungPassAutofill
-	"com.samsung.android.app.clipboardedge"			#ClipboardEdge
 	"com.sec.android.widgetapp.webmanual"			#Usermanual
 	"com.samsung.android.bixby.agent.dummy"			#BixbyVoiceStub
-	"com.samsung.android.app.notes"				#Notes
-	"com.samsung.android.app.notes.addons"			#NotesAddons
+
+	# Tab S6 Lite OneUI 3.1
+	"com.sec.location.nsflp2"				#LocationSDK
+	"com.samsung.android.service.airviewdictionary"		#Translate
+	"com.netflix.partner.activation"			#PartnerNetlixActivation
+	"com.samsung.android.themecenter"			#ThemeCenter
+	"com.samsung.android.icecone"				#KeyboardContent
+	"com.samsung.android.game.gos"				#GOS
+	"com.sec.penup"						#PENUP
+	"com.sec.android.app.kidshome"				#KidsHome
+	"com.samsung.android.galaxycontinuity"			#SamsungFlow
+	"com.samsung.android.homemode"				#DailyBoard
 
 	# Userdata GApps
 	"com.google.android.docs"				#Drive
