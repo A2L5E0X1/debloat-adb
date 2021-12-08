@@ -8,7 +8,6 @@
 . $(dirname "$(readlink -f "$0")")/variables_and_functions.sh
 types=$(ls ${script_path}/../type)
 
-clear
 echo "### Debloat Script
 ### by A2L5E0X1 + Razuuu"
 sleep 1

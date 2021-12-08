@@ -6,6 +6,7 @@
 
 # Functions
 function run_script() {
+clear
 bash scripts/${@}.sh
 }
 
