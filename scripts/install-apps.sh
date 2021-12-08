@@ -37,7 +37,7 @@ echo "Fetching APKs..."
 echo "For APK reference check APPS.md"
 applist=(
 	"Aurora.apk+https://files.auroraoss.com/AuroraStore/Stable/AuroraStore_4.0.7.apk"
-	"Bromite.apk+https://github.com/bromite/bromite/releases/download/96.0.4664.54/arm_ChromePublic.apk"
+	"Bromite.apk+https://github.com/bromite/bromite/releases/latest/download/arm_ChromePublic.apk"
 	"F-Droid.apk+https://f-droid.org/repo/org.fdroid.fdroid_1014003.apk"
 	"K9Mail.apk+https://f-droid.org/repo/com.fsck.k9_29005.apk"
 	"MaterialFiles.apk+https://f-droid.org/repo/me.zhanghai.android.files_25.apk"
