@@ -3,7 +3,8 @@ Debloat your Android Device without ROOT, by @A2L5E0X1
 Thanks to @Razuuu for improving this project.
 
 ## Note:
-If you have problems or your device bootloops/crashes after using the script, please report it and don't blame me. **YOU** are using my debloat-scripts. It's important to **read the README** to get all needed informations. If your device stops working, you probably need to hardreset it. Please backup all apps you uninstall with [APK Extractor](https://f-droid.org/en/packages/axp.tool.apkextractor/) and your internal storage!
+If you have problems or your device bootloops/crashes after using the script, please report it and don't blame me. **YOU** are using my debloat-scripts. It's important to **read the README** to get all needed informations. If your device stops working, you probably need to hardreset it. Please backup all apps you uninstall with [APK Extractor](https://f-droid.org/en/packages/axp.tool.apkextractor/) and your internal storage!  
+We also have a Telegram Channel and Group now for updates, support, help and improvements. Click [here](https://t.me/a2l5_debloat_adb) to join.
 
 ## How to use?
 Download the repository using git cli or github web. Then install ADB and run `./debloat-adb.sh' and choose what you want to remove. Before using the script, edit it in type/xxx.sh and remove the apps you want to keep! (just put a # in front of the line or remove it.)
