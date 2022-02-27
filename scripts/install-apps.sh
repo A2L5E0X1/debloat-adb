@@ -35,16 +35,16 @@ fi
 echo "Fetching APKs..."
 echo "For APK reference check APPS.md"
 applist=(
-	"Aurora.apk+https://files.auroraoss.com/AuroraStore/Stable/AuroraStore_4.0.7.apk"
+	"Aurora.apk+https://files.auroraoss.com/AuroraStore/Stable/AuroraStore_4.1.1.apk"
 	"Bromite.apk+https://github.com/bromite/bromite/releases/latest/download/arm_ChromePublic.apk"
-	"F-Droid.apk+https://f-droid.org/repo/org.fdroid.fdroid_1014003.apk"
-	"K9Mail.apk+https://f-droid.org/repo/com.fsck.k9_29005.apk"
+	"F-Droid.apk+https://f-droid.org/repo/org.fdroid.fdroid_1014050.apk"
+	"K9Mail.apk+https://f-droid.org/repo/com.fsck.k9_29012.apk"
 	"MaterialFiles.apk+https://f-droid.org/repo/me.zhanghai.android.files_25.apk"
 	"Metro.apk+https://f-droid.org/repo/io.github.muntashirakon.Music_10503.apk"
-	"NewPipe.apk+https://archive.newpipe.net/fdroid/repo/NewPipe_v0.21.13.apk"
-	"OpenBoard.apk+https://f-droid.org/repo/org.dslul.openboard.inputmethod.latin_15.apk"
+	"NewPipe.apk+https://archive.newpipe.net/fdroid/repo/NewPipe_v0.22.1.apk"
+	"OpenBoard.apk+https://f-droid.org/repo/org.dslul.openboard.inputmethod.latin_18.apk"
 	"QKSMS.apk+https://f-droid.org/repo/com.moez.QKSMS_2218.apk"
-	"SimpleGallery.apk+https://f-droid.org/repo/com.simplemobiletools.gallery.pro_356.apk"
+	"SimpleGallery.apk+https://f-droid.org/repo/com.simplemobiletools.gallery.pro_348.apk"
 )
 
 for APPS in ${applist[@]}; do apks=$(echo $APPS | sed 's/+/ /g'); wget -O ${script_path}/../tmp/$apks; done
