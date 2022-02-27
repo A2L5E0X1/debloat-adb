@@ -25,9 +25,6 @@ Disable all entries by Google (e.g. Find my Device or Google Pay).
 If it's done, press ENTER to continue!"
 read
 
-# Disable GMS package to avoid issues with some apps
-$adb_location shell pm disable-user com.google.android.gms
-
 bloatware=(
 	# Google Apps
 
@@ -101,3 +98,6 @@ do
 	$adb_location shell pm uninstall --user 0 $app
 	$adb_location shell pm uninstall $app
 done
+
+# Disable GMS package to avoid issues with some apps
+$adb_location shell pm disable-user com.google.android.gms
