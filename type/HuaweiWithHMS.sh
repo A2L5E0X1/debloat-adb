@@ -11,12 +11,17 @@ echo "### Huawei EMUI Debloat Script
 ### by A2L5E0X1 + Razuuu"
 sleep 1
 
+red_message "LAST WARNING: THIS SCRIPT **WILL** REMOVE HMS (Huawei Mobile Services) AND AppGallery!
+IF YOU WANT TO KEEP THEM, USE THE HuaweiWithoutHMS SCRIPT INSTEAD!
+
+Press ENTER to continue. Press CTRL+C to exit."
+read
+
 bloatware=(
 	# EMUI 5 Parts - VNS-L21C432B506
 	"com.huawei.android.chr"				#CHR Service
 	"com.huawei.phoneservice" 				#HiCare
 	"com.huawei.iconnect"					#iconnect
-	"com.huawei.hwid"					#Huawei Account Login
 	"com.huawei.android.instantshare"			#Huawei Share
 	"com.huawei.indexsearch.observer"			#indexsearch
 	"com.huawei.indexsearch" 				#indexsearch
@@ -35,7 +40,6 @@ bloatware=(
 	"com.huawei.compass"					#Compass
 	"com.android.hwmirror"					#Mirror
 	"com.huawei.gamebox.global"				#HiGame
-	"com.huawei.appmarket"					#AppGallery
 	"com.huawei.health"					#Health
 	"com.huawei.KoBackup"					#Backup
 
@@ -72,7 +76,6 @@ bloatware=(
 	"com.huawei.hicard"					#HiCard
 	"com.huawei.localBackup"				#Backup
 	"com.huawei.entitlement"				#Entitlement
-	"com.huawei.android.hsf"				#HMSServiceFramework
 	"com.huawei.mirror"					#Mirror
 	"com.huawei.hidisk"					#Cloud
 	"com.huawei.parentcontrol"				#DigialBalance
@@ -129,6 +132,11 @@ bloatware=(
 	"com.huawei.securityserver"				#HwSecurityServer
 	"com.huawei.hwddmp"					#HwDDMP
 	"com.example.android.notepad"				#Notes
+
+	# Huawei Mobile Services
+	"com.huawei.hwid"					#HMSCore
+	"com.huawei.appmarket"					#AppGallery
+	"com.huawei.android.hsf"				#HMSServiceFramework
 
 	# Gameloft Games
 	"com.gameloft.android.GloftAGMP"
