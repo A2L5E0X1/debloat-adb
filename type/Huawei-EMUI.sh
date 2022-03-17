@@ -66,6 +66,70 @@ bloatware=(
 	# EMUI 10 Parts - HRY-LX1C432
 	"com.huawei.wallet"					#Wallet
 
+	# EMUI 11 Parts - LYA-L29 11.0.0.200(C432E4R1P4)
+	"com.huawei.easygo"					#HwEasyGo
+	"com.huawei.harmonyos.foundation"			#FoundationApplication
+	"com.huawei.hicard"					#HiCard
+	"com.huawei.localBackup"				#Backup
+	"com.huawei.entitlement"				#Entitlement
+	"com.huawei.android.hsf"				#HMSServiceFramework
+	"com.huawei.mirror"					#Mirror
+	"com.huawei.hidisk"					#Cloud
+	"com.huawei.parentcontrol"				#DigialBalance
+	"com.huawei.search"					#AISearch
+	"com.huawei.tipsove"					#Tips
+	"com.huawei.fastapp"					#QuickAppCentre
+	"com.ebay.carrier"					#EbayCarrier
+	"com.huawei.arengine.service"				#AREngineServer
+	"com.huawei.airlink"					#AirLink
+	"com.huawei.videoeditor"				#VideoEditor
+	"com.huawei.securitymgr"				#SecurityComponents
+	"com.huawei.browserhomepage"				#BrowserHomepage
+	"com.huawei.wallet.sdk.walletsdk"			#WalletSDK
+	"com.huawei.hiai"					#HiAIEngine
+	"com.huawei.systemserver"				#SystemServices
+	"com.huawei.gamebox"					#GameCentre
+	"com.huawei.android.internal.app"			#HuaweiShare
+	"com.huawei.magazine"					#MagazineUnlock
+	"com.huawei.remotepassword"				#RemotePassword
+	"com.huawei.maps.app"					#PetalMaps
+	"com.huawei.nb.service"					#DataManagementServices
+	"com.huawei.hwpanpayservice"				#HwPanPayService
+	"com.huawei.browser"					#Browser
+	"com.huawei.controlcenter"				#ControlPanel
+	"com.huawei.privatespace"				#PrivateSpace
+	"com.huawei.featurelayer.sharedfeature.xrkit"		#XRKit
+	"com.huawei.welinknow"					#LinkNow
+	"com.huawei.searchservice"				#FusionSearchService
+	"com.microsoft.translator"				#Translator
+	"com.huawei.hwstartupguide"				#HwStartupGuide
+	"com.huawei.contactscamcard"				#ScanBusinessCard
+	"com.swiftkey.swiftkeyconfigurator"			#SwiftKeyFactorySettings
+	"com.huawei.hitouch"					#AITouch
+	"com.huawei.coauthservice"				#HwCoAuthService
+	"com.huawei.android.hwaps"				#HwAps
+	"com.huawei.behaviorauth"				#HwBehaviorAuth
+	"com.huawei.deviceauth"					#HwDeviceAuth
+	"com.huawei.pcassistant"				#HuaweiShare
+	"com.huawei.android.remotecontroller"			#SmartRemote
+	"com.huawei.hwblockchain"				#HwBlockChain
+	"com.huawei.assetsync"					#HwAssetSync
+	"com.huawei.hwvoipservice"				#MeeTimeService
+	"com.huawei.android.karaoke"				#KaraokeEffect
+	"com.huawei.game.kitserver"				#GameKit
+	"com.huawei.assetsyncservice"				#HwAssetSyncService
+	"com.huawei.def"					#DEF
+	"com.huawei.hff"					#hff
+	"com.huawei.hiaction"					#HiAIBase
+	"com.huawei.hwsearch"					#PetalSearch
+	"com.huawei.hwread.dz"					#Reader
+	"com.huawei.mycenter"					#MemberCentre
+	"com.huawei.distributed.kms"				#HwDistributedKeyManager
+	"com.huawei.securitypluginbase"				#SecurityPluginBase
+	"com.huawei.securityserver"				#HwSecurityServer
+	"com.huawei.hwddmp"					#HwDDMP
+	"com.example.android.notepad"				#Notes
+
 	# Gameloft Games
 	"com.gameloft.android.GloftAGMP"
 	"com.gameloft.android.GloftDBMF"

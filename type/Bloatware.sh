@@ -31,6 +31,8 @@ bloatware=(
 	"com.netflix.mediaclient"		#Netflix
 	"com.microsoft.appmanager"		#YourPhone
 	"com.linkedin.android"			#LinkedIn
+	"com.ebay.mobile"			#eBay
+	"com.booking"				#Booking.com
 )
 
 for app in ${bloatware[@]}
