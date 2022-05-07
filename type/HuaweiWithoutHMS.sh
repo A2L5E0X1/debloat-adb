@@ -94,6 +94,10 @@ bloatware=(
 	"com.huawei.hwread.dz"					#Reader
 	"com.huawei.mycenter"					#MemberCentre
 
+	# EMUI 12 Parts - LYA-L29 12.0.0.132(C432E3R1P2patch01)
+	"com.huawei.meetime"					#MeeTime
+	"com.huawei.ohos.inputmethod"				#CeliaKeyboard
+
 	# Gameloft Games
 	"com.gameloft.android.GloftAGMP"
 	"com.gameloft.android.GloftDBMF"
