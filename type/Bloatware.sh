@@ -1,5 +1,4 @@
 #!/bin/bash
-
 #
 # This Script is by A2L5E0X1 + Razuuu
 #
@@ -12,31 +11,30 @@ echo "### Bloatware Debloat Script
 sleep 1
 
 bloatware=(
-	# Bloatware
-	"com.hp.android.printservice"		#HP Printservice
-	"com.mobilesrepublic.appy"		#NewsRepublic
-	"com.facebook.katana"			#Facebook
-	"com.facebook.orca"	 		#Messanger
-	"com.twitter.android"	 		#Twitter
-	"com.microsoft.office.word"		#MS Word
-	"com.microsoft.office.onenote"		#MS OneNote
-	"com.microsoft.office.excel"		#MS Excel
-	"com.dropbox.android"			#Dropbox
-	"com.microsoft.skydrive"		#OneDrive
-	"com.microsoft.office.powerpoint"	#MS Powerpoint
-	"com.microsoft.office.outlook"		#MS Outlook
-	"com.skype.raider"			#Skype
-	"com.microsoft.office.officehubrow"	#Office
-	"com.spotify.music"			#Spotify
-	"com.netflix.mediaclient"		#Netflix
-	"com.microsoft.appmanager"		#YourPhone
-	"com.linkedin.android"			#LinkedIn
-	"com.ebay.mobile"			#eBay
-	"com.booking"				#Booking.com
+    # Bloatware
+    "com.hp.android.printservice" #HP Printservice
+    "com.mobilesrepublic.appy" #NewsRepublic
+    "com.facebook.katana" #Facebook
+    "com.facebook.orca" #Messanger
+    "com.twitter.android" #Twitter
+    "com.microsoft.office.word" #MS Word
+    "com.microsoft.office.onenote" #MS OneNote
+    "com.microsoft.office.excel" #MS Excel
+    "com.dropbox.android" #Dropbox
+    "com.microsoft.skydrive" #OneDrive
+    "com.microsoft.office.powerpoint" #MS Powerpoint
+    "com.microsoft.office.outlook" #MS Outlook
+    "com.skype.raider" #Skype
+    "com.microsoft.office.officehubrow" #Office
+    "com.spotify.music" #Spotify
+    "com.netflix.mediaclient" #Netflix
+    "com.microsoft.appmanager" #YourPhone
+    "com.linkedin.android" #LinkedIn
+    "com.ebay.mobile" #eBay
+    "com.booking" #Booking.com
 )
 
-for app in ${bloatware[@]}
-do
-	$adb_location shell pm uninstall --user 0 $app
-	$adb_location shell pm uninstall $app
+for app in ${bloatware[@]}; do
+    $adb_location shell pm uninstall --user 0 $app
+    $adb_location shell pm uninstall $app
 done

@@ -14,8 +14,8 @@ sleep 1
 
 # Check for ADB
 if [ "$(which adb)" != "$adb_location" ]; then
-	red_message "ERROR: ADB not found! Please install it or set correct PATH!"
-	exit 1
+    red_message "ERROR: ADB not found! Please install it or set correct PATH!"
+    exit 1
 fi
 
 # Warning
@@ -31,9 +31,9 @@ echo
 # Show all available types
 echo "Currently available types:"
 for i in ${types}; do
-if [ ! ${i} == "Example.sh" ]; then
-echo "· $(echo ${i} | sed 's/\.[^.]*$//')"
-fi
+    if [ ! ${i} == "Example.sh" ]; then
+	echo "· $(echo ${i} | sed 's/\.[^.]*$//')"
+    fi
 done
 echo
 
@@ -43,7 +43,7 @@ selected_type=$(ls ${script_path}/../type | grep -i $select_type | sed 's/\.[^.]
 
 # Fail if type not found
 if [ ${selected_type} != $types | grep -i ${select_type} ]; then
-  echo -e "\nType not found!"; exit 1
+    echo -e "\nType not found!"; exit 1
 fi
 
 # Start debloat

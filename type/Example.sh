@@ -26,16 +26,14 @@ bloatware=(
 # Please put the package names in "" and then a comment what the app is for or how its called
 #
 # Example:
-#*tab	*"com.example.xd"	#xd example
+#*4 spaces*"com.example.xd"	#xd example
 # Now put your own apps like in the example here:
 #
-	"1"	# 1
-	"2"	# 2
-
+    "1"	# 1
+    "2"	# 2
 )
 
-for app in ${bloatware[@]}
-do
-	$adb_location shell pm uninstall --user 0 $app
-	$adb_location shell pm uninstall $app
+for app in ${bloatware[@]}; do
+    $adb_location shell pm uninstall --user 0 $app
+    $adb_location shell pm uninstall $app
 done

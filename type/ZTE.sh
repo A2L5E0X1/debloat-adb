@@ -12,22 +12,21 @@ echo "### ZTE AOSP Debloat Script
 sleep 1
 
 bloatware=(
-	# ZTE AOSP (Blade A7 2019 Android 9)
-	"com.zte.privacyzone"			#Privacy Zone
-	"com.zte.handservice"			#ZTE Cares
-	"com.zte.heartyservice.strategy"	#Speedup Service
-	"com.zte.privacypolicy"			#Privacy
-	"zte.com.cn.filer"			#Filemanager
-	"cn.zte.recorder"			#Recorder
-	"com.ume.browser.cust"			#UmeBrowser
-	"com.zte.videoplayer"			#Video
-	"com.hermes.superb.oem"			#Superb Cleaner
-	"com.icoolme.bestweather"		#BestWeather
-	"com.android.mipop"			#Z-POP
+    # ZTE AOSP (Blade A7 2019 Android 9)
+    "com.zte.privacyzone" #Privacy Zone
+    "com.zte.handservice" #ZTE Cares
+    "com.zte.heartyservice.strategy" #Speedup Service
+    "com.zte.privacypolicy" #Privacy
+    "zte.com.cn.filer" #Filemanager
+    "cn.zte.recorder" #Recorder
+    "com.ume.browser.cust" #UmeBrowser
+    "com.zte.videoplayer" #Video
+    "com.hermes.superb.oem" #Superb Cleaner
+    "com.icoolme.bestweather" #BestWeather
+    "com.android.mipop" #Z-POP
 )
 
-for app in ${bloatware[@]}
-do
-	$adb_location shell pm uninstall --user 0 $app
-	$adb_location shell pm uninstall $app
+for app in ${bloatware[@]}; do
+    $adb_location shell pm uninstall --user 0 $app
+    $adb_location shell pm uninstall $app
 done

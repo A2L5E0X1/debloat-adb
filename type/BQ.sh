@@ -12,17 +12,16 @@ echo "### BQ Debloat Script
 sleep 1
 
 bloatware=(
-	"com.estrongs.android.pop" # ES File Explorer
-	"com.bqreaders.ota" # Dead BQ OTAs App
-	"com.bqreaders.reader.nubicoapp" # Nubico
-	"com.bq.bqbookmark" # BQ Bookmarks
-	"com.bq.wizardbq.insurance" # BQ Protection Plus
-	"com.quickoffice.android" # Quick Office
-	"com.hp.android.printservice" # HP Print Service
+    "com.estrongs.android.pop" # ES File Explorer
+    "com.bqreaders.ota" # Dead BQ OTAs App
+    "com.bqreaders.reader.nubicoapp" # Nubico
+    "com.bq.bqbookmark" # BQ Bookmarks
+    "com.bq.wizardbq.insurance" # BQ Protection Plus
+    "com.quickoffice.android" # Quick Office
+    "com.hp.android.printservice" # HP Print Service
 )
 
-for app in ${bloatware[@]}
-do
-	$adb_location shell pm uninstall --user 0 $app
-	$adb_location shell pm uninstall $app
+for app in ${bloatware[@]}; do
+    $adb_location shell pm uninstall --user 0 $app
+    $adb_location shell pm uninstall $app
 done
