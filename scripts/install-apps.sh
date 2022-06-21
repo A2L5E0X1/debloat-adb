@@ -44,7 +44,8 @@ applist=(
 )
 
 for APPS in ${applist[@]}; do
-    apks=$(echo $APPS | sed 's/+/ /g'); wget -O ${script_path}/../tmp/$apks
+    apks=$(echo $APPS | sed 's/+/ /g')
+    curl -s -o ${script_path}/../tmp/$apks
 done
 
 # Waiting for Device
