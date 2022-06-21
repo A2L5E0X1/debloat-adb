@@ -2,14 +2,8 @@
 
 script_path=$(dirname "$(readlink -f "$0")")
 
-function get_locations() {
-# These are the default locations, change it if you are using custom paths.
-case "$OSTYPE" in
-    linux*) adb_location="/usr/bin/adb"; git_location="/usr/bin/git" ;;
-    darwin*) adb_location="/usr/local/bin/adb"; git_location="/usr/bin/git" ;;
-esac
-}
-get_locations
+ADB="$(which adb)"
+GIT="$(which git)"
 
 function contribute_text() {
     echo "If you want to contribute, you can create an Issue or a Pull-Request! :)

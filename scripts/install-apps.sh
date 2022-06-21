@@ -13,13 +13,15 @@ sleep 1
 
 
 # Check for ADB
-if [ "$(which adb)" != "$adb_location" ]; then
-    echo "ERROR: ADB not found! Please install it or set correct ADB path!"; exit 255
+if [ ! -f $ADB ]; then
+    red_message "ERROR: ADB not found! Please install it or add it to your PATH!"
+    exit 1
 fi
 
 # Check for GIT
-if [ "$(which git)" != "$git_location" ]; then
-    echo "ERROR: GIT not found! Please install it or set correct GIT path!"; exit 255
+if [ ! -f $GIT ]; then
+    red_message "ERROR: GIT not found! Please install it or add it to your PATH!"
+    exit 1
 fi
 
 # Warning
@@ -53,19 +55,19 @@ done
 
 # Waiting for Device
 echo "Waiting for device..."
-$adb_location wait-for-device
+$ADB wait-for-device
 echo "Device found!"
-$adb_location devices
+$ADB devices
 echo "Installation will start soon..."
 sleep 3
 
 # Install Apps
 for APKS in $(find ${script_path}/../tmp -name *.apk); do
-    $adb_location install $APKS
+    $ADB install $APKS
 done
 
 # Disconnect ADB
-$adb_location kill-server
+$ADB kill-server
 
 # Success
 echo "Install success"

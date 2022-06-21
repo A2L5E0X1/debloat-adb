@@ -18,7 +18,7 @@ Press ENTER to continue. Press CTRL+C to exit."
 read
 
 # Start device administrators activity
-$adb_location shell am start com.android.settings/.DeviceAdminSettings
+$ADB shell am start com.android.settings/.DeviceAdminSettings
 
 echo "On your device, the device administrator settings should show up now. If it doesn't, please report this in an github issue including your device, OEM skin and Android version.
 Disable all entries by Google (e.g. Find my Device or Google Pay).
@@ -92,9 +92,9 @@ bloatware=(
 )
 
 for app in ${bloatware[@]}; do
-    $adb_location shell pm uninstall --user 0 $app
-    $adb_location shell pm uninstall $app
+    $ADB shell pm uninstall --user 0 $app
+    $ADB shell pm uninstall $app
 done
 
 # Disable GMS package to avoid issues with some apps
-$adb_location shell pm disable-user com.google.android.gms
+$ADB shell pm disable-user com.google.android.gms

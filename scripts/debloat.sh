@@ -13,8 +13,8 @@ echo "### Debloat Script
 sleep 1
 
 # Check for ADB
-if [ "$(which adb)" != "$adb_location" ]; then
-    red_message "ERROR: ADB not found! Please install it or set correct PATH!"
+if [ ! -f $ADB ]; then
+    red_message "ERROR: ADB not found! Please install it or add it to your PATH!"
     exit 1
 fi
 
@@ -23,9 +23,9 @@ warning_message
 
 # Waiting for Device
 echo "Waiting for device..."
-$adb_location wait-for-device
+$ADB wait-for-device
 echo "Device found!"
-$adb_location devices
+$ADB devices
 echo
 
 # Show all available types
@@ -51,7 +51,7 @@ clear
 bash ${script_path}/../type/${selected_type}.sh
 
 # Disconnect ADB
-$adb_location kill-server
+$ADB kill-server
 
 # Success
 echo "Debloat success"

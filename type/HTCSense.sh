@@ -62,6 +62,6 @@ bloatware=(
 )
 
 for app in ${bloatware[@]}; do
-    $adb_location shell pm uninstall --user 0 $app
-    $adb_location shell pm uninstall $app
+    $ADB shell pm uninstall --user 0 $app
+    $ADB shell pm uninstall $app
 done
