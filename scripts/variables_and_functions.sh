@@ -3,7 +3,6 @@
 script_path=$(dirname "$(readlink -f "$0")")
 
 ADB="$(which adb)"
-GIT="$(which git)"
 
 function contribute_text() {
     echo "If you want to contribute, you can create an Issue or a Pull-Request! :)

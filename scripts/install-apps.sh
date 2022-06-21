@@ -18,12 +18,6 @@ if [ ! -f $ADB ]; then
     exit 1
 fi
 
-# Check for GIT
-if [ ! -f $GIT ]; then
-    red_message "ERROR: GIT not found! Please install it or add it to your PATH!"
-    exit 1
-fi
-
 # Warning
 warning_message
 
