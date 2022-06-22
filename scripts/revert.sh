@@ -26,7 +26,12 @@ echo "Waiting for device..."
 $ADB wait-for-device
 echo "Device found!"
 $ADB devices
-echo
+
+# Check if your device supports this feature
+if [[ $($ADB shell "getprop ro.build.version.sdk" | tr -d $'\r' | bc) -lt 28 ]]; then
+    red_message "ERROR: Your device does not support this feature because it doesn't have Android 9 (SDK 28) or newer.\nYou have to factory reset your device to revert the debloats!"
+    exit 1
+fi
 
 # Show all available types
 echo "Currently available types:"
