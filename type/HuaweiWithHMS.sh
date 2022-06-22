@@ -116,8 +116,8 @@ bloatware=(
     "com.gameloft.android.GloftANPH"
 )
 
-for app in ${bloatware[@]}; do
-    $ADB shell pm uninstall --user 0 $app
-    $ADB shell pm uninstall $app
-done
+function post_debloat() {
+}
 
+function post_revert() {
+}

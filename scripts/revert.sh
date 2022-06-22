@@ -8,7 +8,7 @@
 . $(dirname "$(readlink -f "$0")")/variables_and_functions.sh
 types=$(ls ${script_path}/../type)
 
-echo "### Debloat Script
+echo "### Revert Script
 ### by A2L5E0X1 + Razuuu"
 sleep 1
 
@@ -46,17 +46,16 @@ if [ ${selected_type} != $types | grep -i ${select_type} ]; then
     echo -e "\nType not found!"; exit 1
 fi
 
-# Start debloat
+# Revert debloat
 clear
 source ${script_path}/../type/${selected_type}.sh
-echo "Starting debloat..."
+echo "Reverting debloat..."
 
 for app in ${bloatware[@]}; do
-    $ADB shell pm uninstall --user 0 $app
-    $ADB shell pm uninstall $app
+    $ADB shell pm install-existing $app
 done
 
-post_debloat
+post_revert
 
 # Disconnect ADB
 $ADB kill-server

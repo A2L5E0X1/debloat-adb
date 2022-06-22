@@ -91,10 +91,11 @@ bloatware=(
     "com.google.android.tts" #Google TTS
 )
 
-for app in ${bloatware[@]}; do
-    $ADB shell pm uninstall --user 0 $app
-    $ADB shell pm uninstall $app
-done
-
 # Disable GMS package to avoid issues with some apps
+function post_debloat() {
 $ADB shell pm disable-user com.google.android.gms
+}
+
+function post_revert() {
+$ADB shell pm enable com.google.android.gms
+}
